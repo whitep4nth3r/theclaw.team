@@ -1,14 +1,42 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root {
+  --red: #f11012;
+  --red-darker: #d90d10;
+  --green: #82af3a;
+  --black: #0f111a;
+  --white: #ffffff;
+  --offwhite: #f8f8f2;
+  --turquoise: #489fb9;
+  --pink: #cf4a88;
+  --purple: #633395;
+  --yellow: #ffb626;
+  --yellow-darker: #f0a000;
+  --grid-unit: 0.5rem;
+  --font-weight-normal: 300;
+  --font-weight-bold: 700;
+  --font-family-heading: "Titillium Web", sans-serif;
+  --font-family-main: "Titillium Web", sans-serif;
+  --global-transition-time: 0.2s;
+  --hard-box-shadow: 0.625rem 0.625rem 0 0 var(--yellow-darker);
+
+  --color-bg: var(--white);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* background-image: url("/assets/moth_stencil.svg"); */
+  background-repeat: repeat;
+  background-size: 9rem;
+  min-height: 100vh;
+
+  background-color: var(--color-bg);
 }
 
 * {

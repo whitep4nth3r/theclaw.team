@@ -1,0 +1,16 @@
+.streamers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 2rem 4rem;
+  list-style: none;
+  padding: 0;
+}
+
+.streamers__item {
+  margin: 1rem;
+}
+
+.streamers__img {
+  background-color: var(--black);
+  width: 100%;
+}
