@@ -1,16 +1,8 @@
 export default class TeamData {
-  static CACHE = [];
-
   static async getStreamers() {
-    if (TeamData.CACHE.length > 0) {
-      return TeamData.CACHE;
-    }
-
     const streamers = await fetch(
       "https://jwalter-teamschedule.builtwithdark.com/schedule",
     ).then((response) => response.json());
-
-    TeamData.CACHE = streamers;
 
     return streamers;
   }

@@ -1,6 +1,8 @@
 import Head from "next/head";
+import Link from "next/link";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import Layout from "@components/Layout";
 import TeamData from "@utils/TeamData";
 
 export default function Streamer({ streamer }) {
@@ -14,36 +16,40 @@ export default function Streamer({ streamer }) {
 
       <Header />
 
-      <main>
-        <h1>{streamer.display_name}</h1>
-        <p>{streamer.description}</p>
-        <p>{streamer.broadcaster_type}</p>
+      <Layout>
+        <Link href="/">
+          <a>Back to all streamers</a>
+        </Link>
+        <main>
+          <h1>{streamer.display_name}</h1>
+          <p>{streamer.description}</p>
+          <p>{streamer.broadcaster_type}</p>
 
-        <img
-          src={streamer.profile_image_url}
-          alt={`${streamer.display_name} Twitch profile picture`}
-        />
+          <img
+            src={streamer.profile_image_url}
+            alt={`${streamer.display_name} Twitch profile picture`}
+          />
 
-        <a href={`https://twitch.tv/${streamer.login}`} target="_blank">
-          Twitch profile link
-        </a>
+          <a href={`https://twitch.tv/${streamer.login}`} target="_blank">
+            Twitch profile link
+          </a>
 
-        <p>View count: {streamer.view_count}</p>
+          <p>View count: {streamer.view_count}</p>
 
-        <h3>Schedule</h3>
+          <h3>Schedule</h3>
 
-        {streamer.segments?.length > 0 &&
-          streamer.segments.map((segment) => (
-            <div key={segment.id}>
-              <p>{segment.title}</p>
-              {segment.category !== null && <p>{segment.category.name}</p>}
-              <p>{segment.start_time}</p>
-              <p>{segment.end_time}</p>
-            </div>
-          ))}
-      </main>
-
-      <Footer />
+          {streamer.segments?.length > 0 &&
+            streamer.segments.map((segment) => (
+              <div key={segment.id}>
+                <p>{segment.title}</p>
+                {segment.category !== null && <p>{segment.category.name}</p>}
+                <p>{segment.start_time}</p>
+                <p>{segment.end_time}</p>
+              </div>
+            ))}
+        </main>
+        <Footer />
+      </Layout>
     </>
   );
 }

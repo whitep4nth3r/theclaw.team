@@ -3,6 +3,7 @@ import ContentfulData from "@utils/ContentfulData";
 import TeamData from "@utils/TeamData";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import Layout from "@components/Layout";
 import Streamers from "@components/Streamers";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -20,13 +21,14 @@ export default function Home({ streamers, page }) {
 
       <Header />
 
-      <main>
-        <h1>{page.title}</h1>
-        {documentToReactComponents(page.content.json)}
-        <Streamers streamers={streamers} />
-      </main>
-
-      <Footer />
+      <Layout>
+        <main>
+          <h1>{page.title}</h1>
+          {documentToReactComponents(page.content.json)}
+          <Streamers streamers={streamers} />
+        </main>
+        <Footer />
+      </Layout>
     </>
   );
 }

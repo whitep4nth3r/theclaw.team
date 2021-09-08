@@ -1,0 +1,22 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content: flex-start;
+}
+
+.layout__sidebar {
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+}
+
+.layout__sidebarInner {
+  position: fixed;
+  top: calc(50% - 83px); /* temp hardcoding */
+  transform: translateY(-50%);
+}
+
+.layout__main {
+  padding: 2rem;
+  margin-bottom: 6rem;
+}

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import Layout from "@components/Layout";
 import ContentfulData from "@utils/ContentfulData";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
@@ -15,12 +16,13 @@ export default function CodeOfConduct({ page }) {
 
       <Header />
 
-      <main>
-        <h1>{page.title}</h1>
-        {documentToReactComponents(page.content.json)}
-      </main>
-
-      <Footer />
+      <Layout>
+        <main>
+          <h1>{page.title}</h1>
+          {documentToReactComponents(page.content.json)}
+        </main>
+        <Footer />
+      </Layout>
     </>
   );
 }

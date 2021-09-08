@@ -20,7 +20,6 @@ export default class ContentfulData {
   }
 
   static async callApi(query) {
-    console.log("CALLING API");
     try {
       const response = await fetch(
         `https://graphql.contentful.com/content/v1/spaces/${process.env.CTFL_SPACE_ID}/environments/master`,

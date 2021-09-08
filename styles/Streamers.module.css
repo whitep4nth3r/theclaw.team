@@ -1,7 +1,6 @@
 .streamers {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 2rem 4rem;
   list-style: none;
   padding: 0;
 }
@@ -13,4 +12,6 @@
 .streamers__img {
   background-color: var(--black);
   width: 100%;
+  box-shadow: 0.5rem 0.5rem 0 0 var(--black);
+  border: 0.25rem solid var(--yellow);
 }
