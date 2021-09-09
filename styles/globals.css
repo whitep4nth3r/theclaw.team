@@ -22,8 +22,8 @@
 
   --hard-box-shadow: var(--turquoise) 0 0 0 0.5rem;
 
-  --color-bg: var(--white);
-  --color-fg: var(--black);
+  --color-bg: var(--black);
+  --color-fg: var(--white);
 }
 
 html {
@@ -41,8 +41,10 @@ body {
   min-height: 100vh;
 
   background-color: var(--color-bg);
+  color: var(--color-fg);
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }

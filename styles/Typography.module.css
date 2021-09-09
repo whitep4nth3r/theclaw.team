@@ -1,0 +1,20 @@
+.typography__h1 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  color: var(--color-fg);
+  text-transform: uppercase;
+}
+
+.typography__body {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-main);
+  color: var(--color-fg);
+  word-break: break-word;
+}

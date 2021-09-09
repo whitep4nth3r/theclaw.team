@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Layout from "@components/Layout";
 import TeamData from "@utils/TeamData";
+import PageTitle from "@components/PageTitle";
 
 export default function Streamer({ streamer }) {
   return (
@@ -14,14 +14,13 @@ export default function Streamer({ streamer }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-
       <Layout>
         <Link href="/">
           <a>Back to all streamers</a>
         </Link>
         <main>
-          <h1>{streamer.display_name}</h1>
+          <PageTitle title={streamer.display_name} />
+
           <p>{streamer.description}</p>
           <p>{streamer.broadcaster_type}</p>
 

@@ -8,9 +8,7 @@
 }
 
 .header__nav {
-  background-color: var(--color-fg);
-  position: fixed;
-  bottom: 0;
+  background-color: var(--color-bg);
   width: 100%;
 }
 
@@ -28,7 +26,7 @@
 
 .header__navListItemLink {
   text-decoration: none;
-  color: var(--color-bg);
+  color: var(--color-fg);
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
   text-align: center;
@@ -40,4 +38,10 @@
   outline: none;
   box-shadow: var(--hard-box-shadow);
   transition: box-shadow var(--global-transition-time);
+}
+
+@media screen and (min-width: 1080px) {
+  .header__navListItemLink {
+    text-align: left;
+  }
 }

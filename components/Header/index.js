@@ -1,5 +1,4 @@
 import Link from "next/link";
-import MothBanner from "@components/Svg/MothBanner";
 import Styles from "@styles/Header.module.css";
 
 export default function Header() {

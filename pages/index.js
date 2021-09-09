@@ -1,11 +1,11 @@
 import Head from "next/head";
 import ContentfulData from "@utils/ContentfulData";
 import TeamData from "@utils/TeamData";
-import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Layout from "@components/Layout";
 import Streamers from "@components/Streamers";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import RichText from "@components/RichText";
+import PageTitle from "@components/PageTitle";
 
 export default function Home({ streamers, page }) {
   return (
@@ -19,12 +19,10 @@ export default function Home({ streamers, page }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-
       <Layout>
         <main>
-          <h1>{page.title}</h1>
-          {documentToReactComponents(page.content.json)}
+          <PageTitle title={page.title} />
+          <RichText content={page.content.json} />
           <Streamers streamers={streamers} />
         </main>
         <Footer />

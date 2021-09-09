@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Layout from "@components/Layout";
 import ContentfulData from "@utils/ContentfulData";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import RichText from "@components/RichText";
+import PageTitle from "@components/PageTitle";
 
 export default function CodeOfConduct({ page }) {
   return (
@@ -14,12 +14,10 @@ export default function CodeOfConduct({ page }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-
       <Layout>
         <main>
-          <h1>{page.title}</h1>
-          {documentToReactComponents(page.content.json)}
+          <PageTitle title={page.title} />
+          <RichText content={page.content.json} />
         </main>
         <Footer />
       </Layout>
