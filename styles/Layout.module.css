@@ -15,12 +15,17 @@
 }
 
 .layout__container {
+}
+
+.layout__containerGutter {
   padding: 0 2rem;
 }
 
 .layout__main {
+}
+
+.layout__mainGutter {
   padding: 1rem;
-  margin-bottom: 6rem;
 }
 
 @media screen and (min-width: 1080px) {

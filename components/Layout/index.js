@@ -2,7 +2,10 @@ import Styles from "@styles/Layout.module.css";
 import Header from "@components/Header";
 import MothBanner from "@components/Svg/MothBanner";
 
-export default function Layout({ children }) {
+export default function Layout({ children, noGutter }) {
+  const mainGutterClass = noGutter === undefined ? ` ${Styles.layout__mainGutter}` : "";
+  const containerGutterClass = noGutter === undefined ? ` ${Styles.layout__containerGutter}` : "";
+
   return (
     <div className={Styles.layout}>
       <div className={Styles.layout__brandBar}>
@@ -12,9 +15,9 @@ export default function Layout({ children }) {
           </span>
         </div>
       </div>
-      <div className={Styles.layout__container}>
+      <div className={`${Styles.layout__main}${containerGutterClass}`}>
         <Header />
-        <div className={Styles.layout__main}>{children}</div>
+        <div className={`${Styles.layout__main}${mainGutterClass}`}>{children}</div>
       </div>
     </div>
   );

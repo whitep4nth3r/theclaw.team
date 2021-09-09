@@ -3,7 +3,7 @@
 
 .header__logoContainer:focus {
   outline: none;
-  box-shadow: var(--hard-box-shadow);
+  box-shadow: var(--focus-box-shadow);
   transition: box-shadow var(--global-transition-time);
 }
 
@@ -36,7 +36,7 @@
 
 .header__navListItemLink:focus {
   outline: none;
-  box-shadow: var(--hard-box-shadow);
+  box-shadow: var(--focus-box-shadow);
   transition: box-shadow var(--global-transition-time);
 }
 

@@ -11,7 +11,6 @@
   --pink: #cf4a88;
   --purple: #633395;
   --yellow: #ffb626;
-  --yellow-darker: #f0a000;
   --grid-unit: 0.5rem;
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -20,7 +19,7 @@
   --font-family-body: "Work Sans", sans-serif;
   --global-transition-time: 0.2s;
 
-  --hard-box-shadow: var(--turquoise) 0 0 0 0.5rem;
+  --focus-box-shadow: var(--yellow) 0 0 0 0.25rem;
 
   --color-bg: var(--black);
   --color-fg: var(--white);
