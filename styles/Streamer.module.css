@@ -28,7 +28,47 @@
   margin-right: 0.5rem;
 }
 
-.streamer__banner {
+.streamer__header {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  column-gap: 2rem;
+  grid-template-areas:
+    "avatar"
+    "stream";
+}
+
+.streamer__headerLink {
+  text-decoration: none;
+}
+
+.streamer__headerAvatar {
+  grid-area: avatar;
+  max-width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.streamer__headerStream {
+  grid-area: stream;
+  width: 100%;
+}
+
+.streamer__headerStreamImg {
+  width: 100%;
+  height: auto;
+}
+
+.streamer__description {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .streamer__header {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "avatar stream";
+  }
+
+  .streamer__headerAvatar {
+    margin-left: unset;
+    margin-right: unset;
+  }
 }

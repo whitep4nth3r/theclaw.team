@@ -1,7 +1,20 @@
+.layout {
+  display: grid;
+  grid-template-areas:
+    "bar"
+    "main";
+}
+
 .layout__brandBar {
+  grid-area: bar;
   background-color: var(--red);
   display: flex;
   justify-content: center;
+}
+
+.layout__main {
+  grid-area: main;
+  padding: 1rem;
 }
 
 .layout__brandBarMoth {
@@ -14,24 +27,10 @@
   max-width: 20rem;
 }
 
-.layout__container {
-}
-
-.layout__containerGutter {
-  padding: 0 2rem;
-}
-
-.layout__main {
-}
-
-.layout__mainGutter {
-  padding: 1rem;
-}
-
 @media screen and (min-width: 1080px) {
   .layout {
-    display: grid;
     grid-template-columns: 1fr 3fr;
+    grid-template-areas: "bar main main main";
     justify-content: flex-start;
     background: var(--color-bg);
   }

@@ -8,9 +8,16 @@ import {
   formatDateForTwitchDisplay,
   formatDateForDateTime,
 } from "@utils/Date";
-import Styles from "@styles/Streamer.module.css";
+import styles from "@styles/Streamer.module.css";
+import StreamerAvatar from "@components/StreamerAvatar";
 
 export default function Streamer({ streamer }) {
+  // online: bool
+  // latest_video.thumbnail_url
+  // latest_video.url
+  // latest_video.title
+  // emotes: array
+  console.log(streamer);
   return (
     <>
       <Head>
@@ -19,33 +26,52 @@ export default function Streamer({ streamer }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout noGutter={true}>
+      <Layout>
         <Link href="/">
-          <a className={Styles.streamer__backLink}>Back to all streamers</a>
+          <a className={styles.streamer__backLink}>Back to all streamers</a>
         </Link>
 
-        <main className={Styles.streamer}>
-          <div className={Styles.streamer__banner}>
-            <img
-              src={streamer.profile_image_url}
-              alt={`${streamer.display_name} Twitch profile picture`}
-            />
-            <div>
-              <h1>{streamer.display_name}</h1>
-              <p>{streamer.description}</p>
+        <main className={styles.streamer}>
+          <div className={styles.streamer__header}>
+            <a
+              href={`https://twitch.tv/${streamer.login}`}
+              className={styles.streamer__headerLink}
+              target="_blank">
+              <div className={styles.streamer__headerAvatar}>
+                <StreamerAvatar
+                  imageUrl={streamer.profile_image_url}
+                  name={streamer.display_name}
+                  bio={streamer.description}
+                  live={streamer.online}
+                  isPartner={streamer.broadcaster_type === "partner"}
+                />
+              </div>
+            </a>
+            <div className={styles.streamer__headerStream}>
+              <a
+                href={`https://twitch.tv/${streamer.login}`}
+                className={styles.streamer__headerLink}
+                target="_blank">
+                <img
+                  src={streamer.latest_video.thumbnail_url
+                    .replace("%{width}", "1920")
+                    .replace("%{height}", "1080")}
+                  className={styles.streamer__headerStreamImg}
+                  alt={`${streamer.display_name} latest stream thumbnail`}
+                />
+              </a>
             </div>
           </div>
 
-          {/* <p>{streamer.broadcaster_type}</p> */}
-          {/* <a href={`https://twitch.tv/${streamer.login}`} target="_blank">
+          <a href={`https://twitch.tv/${streamer.login}`} target="_blank">
             Twitch profile link
-          </a> */}
+          </a>
 
           {/* <p>View count: {streamer.view_count}</p> */}
 
-          {/* <h3>Schedule</h3> */}
+          {/* <h3>Schedule</h3>
 
-          {/* {streamer.segments?.length > 0 &&
+          {streamer.segments?.length > 0 &&
             streamer.segments.map((segment) => (
               <div key={segment.id}>
                 <p>{segment.title}</p>
