@@ -3,16 +3,12 @@ import Link from "next/link";
 import Footer from "@components/Footer";
 import Layout from "@components/Layout";
 import TeamData from "@utils/TeamData";
-import {
-  formatTwitchScheduleTimeSlot,
-  formatDateForTwitchDisplay,
-  formatDateForDateTime,
-} from "@utils/Date";
+
 import styles from "@styles/Streamer.module.css";
 import StreamerAvatar from "@components/StreamerAvatar";
+import StreamerSchedule from "@components/StreamerSchedule";
 
 export default function Streamer({ streamer }) {
-  // online: bool
   // latest_video.thumbnail_url
   // latest_video.url
   // latest_video.title
@@ -67,22 +63,7 @@ export default function Streamer({ streamer }) {
             Twitch profile link
           </a>
 
-          {/* <p>View count: {streamer.view_count}</p> */}
-
-          {/* <h3>Schedule</h3>
-
-          {streamer.segments?.length > 0 &&
-            streamer.segments.map((segment) => (
-              <div key={segment.id}>
-                <p>{segment.title}</p>
-                {segment.category !== null && <p>{segment.category.name}</p>}
-
-                <time dateTime={formatDateForDateTime(segment.start_time)}>
-                  {formatDateForTwitchDisplay(segment.start_time)}
-                </time>
-                <p>{formatTwitchScheduleTimeSlot(segment.start_time, segment.end_time)}</p>
-              </div>
-            ))} */}
+          <StreamerSchedule segments={streamer.segments} name={streamer.display_name} />
         </main>
 
         <Footer />

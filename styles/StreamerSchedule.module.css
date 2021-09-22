@@ -1,0 +1,70 @@
+.schedule {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.schedule__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  line-height: 2.2;
+  font-weight: var(--font-weight-bold);
+}
+
+.schedule__segment {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  column-gap: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.schedule__segmentDate {
+}
+
+.schedule__segmentDateTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  font-size: 1.2rem;
+}
+
+.schedule__segmentDateTime__date {
+  font-size: 3rem;
+}
+
+.schedule__segmentInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.schedule__segmentTitle {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.schedule__segmentCat {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+  color: var(--yellow);
+  margin-bottom: 0.5em;
+}
+
+.schedule__segmentTime {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: var(--font-weight-bold);
+}
