@@ -7,13 +7,11 @@ import TeamData from "@utils/TeamData";
 import styles from "@styles/Streamer.module.css";
 import StreamerAvatar from "@components/StreamerAvatar";
 import StreamerSchedule from "@components/StreamerSchedule";
+import LatestStream from "@components/LatestStream";
+import Twitch from "@components/Svg/Twitch";
 
 export default function Streamer({ streamer }) {
-  // latest_video.thumbnail_url
-  // latest_video.url
-  // latest_video.title
   // emotes: array
-  console.log(streamer);
   return (
     <>
       <Head>
@@ -29,6 +27,7 @@ export default function Streamer({ streamer }) {
 
         <main className={styles.streamer}>
           <div className={styles.streamer__header}>
+            <h1 className={styles.streamer__heading}>{streamer.display_name}</h1>
             <a
               href={`https://twitch.tv/${streamer.login}`}
               className={styles.streamer__headerLink}
@@ -43,27 +42,29 @@ export default function Streamer({ streamer }) {
                 />
               </div>
             </a>
-            <div className={styles.streamer__headerStream}>
-              <a
-                href={`https://twitch.tv/${streamer.login}`}
-                className={styles.streamer__headerLink}
-                target="_blank">
-                <img
-                  src={streamer.latest_video.thumbnail_url
-                    .replace("%{width}", "1920")
-                    .replace("%{height}", "1080")}
-                  className={styles.streamer__headerStreamImg}
-                  alt={`${streamer.display_name} latest stream thumbnail`}
-                />
-              </a>
-            </div>
+
+            <a
+              href={`https://twitch.tv/${streamer.login}`}
+              className={styles.streamer__profileLink}
+              target="_blank">
+              <Twitch />
+              View on Twitch
+            </a>
           </div>
 
-          <a href={`https://twitch.tv/${streamer.login}`} target="_blank">
-            Twitch profile link
-          </a>
+          <div className={styles.streamer__schedule}>
+            <StreamerSchedule segments={streamer.segments} name={streamer.display_name} />
+          </div>
 
-          <StreamerSchedule segments={streamer.segments} name={streamer.display_name} />
+          <div className={styles.streamer__stream}>
+            <LatestStream
+              stream={streamer.latest_video}
+              avatarUrl={streamer.profile_image_url}
+              isPartner={streamer.broadcaster_type === "partner"}
+              name={streamer.display_name}
+              live={streamer.online}
+            />
+          </div>
         </main>
 
         <Footer />

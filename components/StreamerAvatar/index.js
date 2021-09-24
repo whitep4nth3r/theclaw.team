@@ -1,5 +1,5 @@
 import styles from "@styles/StreamerAvatar.module.css";
-import CheckMarkSvg from "@components/StreamerAvatar/svg/CheckMarkSvg";
+import CheckMark from "@components/Svg/CheckMark";
 
 export default function StreamerAvatar({ imageUrl, name, bio, live, isPartner }) {
   return (
@@ -10,7 +10,7 @@ export default function StreamerAvatar({ imageUrl, name, bio, live, isPartner })
         <span className={styles.avatar__nameContainer}>
           {isPartner && (
             <span className={styles.avatar__status}>
-              <CheckMarkSvg />
+              <CheckMark />
             </span>
           )}
           <h2 className={styles.avatar__name}>@{name}</h2>
