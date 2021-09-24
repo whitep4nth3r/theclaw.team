@@ -10,8 +10,18 @@ import StreamerSchedule from "@components/StreamerSchedule";
 import LatestStream from "@components/LatestStream";
 import Twitch from "@components/Svg/Twitch";
 
+function transformEmotes(emotes) {
+  return emotes.map((emote) => {
+    return {
+      ...emote,
+      imageUrl: `https://static-cdn.jtvnw.net/emoticons/v2/${emote.id}/default/dark/3.0`,
+    };
+  });
+}
+
 export default function Streamer({ streamer }) {
-  // emotes: array
+  const transformedEmotes = transformEmotes(streamer.emotes);
+
   return (
     <>
       <Head>
@@ -26,8 +36,8 @@ export default function Streamer({ streamer }) {
         </Link>
 
         <main className={styles.streamer}>
+          <h1 className={styles.streamer__heading}>{streamer.display_name}</h1>
           <div className={styles.streamer__header}>
-            <h1 className={styles.streamer__heading}>{streamer.display_name}</h1>
             <a
               href={`https://twitch.tv/${streamer.login}`}
               className={styles.streamer__headerLink}
@@ -50,6 +60,12 @@ export default function Streamer({ streamer }) {
               <Twitch />
               View on Twitch
             </a>
+          </div>
+
+          <div className={styles.streamer__emotes}>
+            {transformedEmotes.map((emote) => (
+              <img src={emote.imageUrl} alt={emote.name} />
+            ))}
           </div>
 
           <div className={styles.streamer__schedule}>

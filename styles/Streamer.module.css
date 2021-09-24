@@ -26,14 +26,24 @@
 }
 
 .streamer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+  grid-template-areas:
+    "heading"
+    "header"
+    "schedule"
+    "stream"
+    "emotes";
 }
 
 .streamer__header {
   text-align: center;
-  margin-bottom: 4rem;
 }
 
 .streamer__heading {
+  grid-area: heading;
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
   margin-bottom: 2rem;
@@ -80,13 +90,46 @@
   transition: box-shadow var(--global-transition-time);
 }
 
+.streamer__header {
+  grid-area: header;
+}
+
+.streamer__emotes {
+  grid-area: emotes;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(6, minmax(3.125rem, 8.125rem));
+}
+
+.streamer__emotes img {
+  max-width: 100%;
+}
+
 .streamer__schedule {
-  margin-bottom: 4rem;
+  grid-area: schedule;
 }
 
 .streamer__stream {
-  margin-bottom: 4rem;
+  grid-area: stream;
 }
 
 @media screen and (min-width: 900px) {
+  .streamer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "heading heading"
+      "header emotes"
+      "schedule schedule"
+      "stream stream";
+  }
+
+  .streamer__header {
+    text-align: unset;
+  }
+
+  .streamer__headerAvatar {
+    margin-left: unset;
+    margin-right: unset;
+  }
 }

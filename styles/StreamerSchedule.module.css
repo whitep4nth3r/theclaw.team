@@ -51,7 +51,6 @@
 
 .schedule__segmentTitle {
   font-size: clamp(1.2rem, 2vw, 2rem);
-  text-transform: uppercase;
   font-weight: var(--font-weight-bold);
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
