@@ -36,7 +36,7 @@ export default function Streamer({ streamer }) {
         </Link>
 
         <main className={styles.streamer}>
-          <h1 className={styles.streamer__heading}>{streamer.display_name}</h1>
+          <h1 className={styles.streamer__name}>{streamer.display_name}</h1>
           <div className={styles.streamer__header}>
             <a
               href={`https://twitch.tv/${streamer.login}`}

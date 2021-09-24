@@ -7,7 +7,7 @@
   font-size: 1rem;
   line-height: 1;
   padding: 0.5rem 0;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   border-bottom: 0.125rem solid var(--red);
   display: inline-flex;
   align-items: center;
@@ -42,13 +42,14 @@
   text-align: center;
 }
 
-.streamer__heading {
+.streamer__name {
   grid-area: heading;
-  font-size: 2rem;
+  font-size: clamp(2rem, 8vw, 8rem);
   font-weight: var(--font-weight-bold);
-  margin-bottom: 2rem;
+  color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .streamer__headerAvatar {
@@ -131,5 +132,9 @@
   .streamer__headerAvatar {
     margin-left: unset;
     margin-right: unset;
+  }
+
+  .streamer__name {
+    text-align: left;
   }
 }
