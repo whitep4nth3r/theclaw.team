@@ -1,5 +1,4 @@
-import Head from "next/head";
-import Footer from "@components/Footer";
+import { NextSeo } from "next-seo";
 import Layout from "@components/Layout";
 import ContentfulData from "@utils/ContentfulData";
 import RichText from "@components/RichText";
@@ -9,15 +8,10 @@ import Config from "@utils/Config";
 export default function CodeOfConduct({ page }) {
   return (
     <>
-      <Head>
-        <title>
-          {page.title}
-          {Config.pageTitleSuffix}
-        </title>
-        <meta name="description" content={page.metaDescription} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <NextSeo
+        title={`${page.title}${Config.pageTitleSuffix}`}
+        description={page.metaDescription}
+      />
       <Layout>
         <PageTitle title={page.title} />
         <RichText content={page.content} />

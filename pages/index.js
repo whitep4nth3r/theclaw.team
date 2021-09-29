@@ -1,25 +1,19 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import ContentfulData from "@utils/ContentfulData";
 import TeamData from "@utils/TeamData";
-import Footer from "@components/Footer";
 import Layout from "@components/Layout";
 import Streamers from "@components/Streamers";
 import RichText from "@components/RichText";
 import PageTitle from "@components/PageTitle";
-
 import Config from "@utils/Config";
 
 export default function Home({ streamers, page }) {
   return (
     <>
-      <Head>
-        <title>
-          {page.title}
-          {Config.pageTitleSuffix}
-        </title>
-        <meta name="description" content={page.metaDescription} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo
+        title={`${page.title}${Config.pageTitleSuffix}`}
+        description={page.metaDescription}
+      />
 
       <Layout>
         <PageTitle title={page.title} />

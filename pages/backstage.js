@@ -1,5 +1,4 @@
-import Head from "next/head";
-import Footer from "@components/Footer";
+import { NextSeo } from "next-seo";
 import Layout from "@components/Layout";
 import PageTitle from "@components/PageTitle";
 import styles from "@styles/Typography.module.css";
@@ -8,14 +7,10 @@ import Config from "@utils/Config";
 export default function Backstage() {
   return (
     <>
-      <Head>
-        <title>
-          Backstage
-          {Config.pageTitleSuffix}
-        </title>
-        <meta name="description" content="Backstage area coming soon" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo
+        title={`Backstage${Config.pageTitleSuffix}`}
+        description="Backstage area coming soon for team members"
+      />
 
       <Layout>
         <PageTitle title="Backstage" />
