@@ -1,9 +1,7 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
-import Footer from "@components/Footer";
 import Layout from "@components/Layout";
 import TeamData from "@utils/TeamData";
-
 import styles from "@styles/Streamer.module.css";
 import StreamerAvatar from "@components/StreamerAvatar";
 import StreamerSchedule from "@components/StreamerSchedule";
