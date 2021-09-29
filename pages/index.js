@@ -5,15 +5,11 @@ import Layout from "@components/Layout";
 import Streamers from "@components/Streamers";
 import RichText from "@components/RichText";
 import PageTitle from "@components/PageTitle";
-import Config from "@utils/Config";
 
 export default function Home({ streamers, page }) {
   return (
     <>
-      <NextSeo
-        title={`${page.title}${Config.pageTitleSuffix}`}
-        description={page.metaDescription}
-      />
+      <NextSeo title={page.title} description={page.metaDescription} />
 
       <Layout>
         <PageTitle title={page.title} />

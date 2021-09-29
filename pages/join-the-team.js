@@ -3,15 +3,11 @@ import Layout from "@components/Layout";
 import ContentfulData from "@utils/ContentfulData";
 import RichText from "@components/RichText";
 import PageTitle from "@components/PageTitle";
-import Config from "@utils/Config";
 
 export default function JoinTheTeam({ page }) {
   return (
     <>
-      <NextSeo
-        title={`${page.title}${Config.pageTitleSuffix}`}
-        description={page.metaDescription}
-      />
+      <NextSeo title={page.title} description={page.metaDescription} />
 
       <Layout>
         <PageTitle title={page.title} />

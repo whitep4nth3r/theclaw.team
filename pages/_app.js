@@ -4,9 +4,10 @@ import SEO from "../next-seo.config.js";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Component {...pageProps}>
-      <DefaultSeo />
-    </Component>
+    <>
+      <DefaultSeo {...SEO} />
+      <Component {...pageProps} />
+    </>
   );
 }
 

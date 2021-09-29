@@ -24,11 +24,7 @@ export default function Streamer({ streamer }) {
 
   return (
     <>
-      <Head>
-        <title>{streamer.display_name} | The Claw Stream Team</title>
-        <meta name="description" content={streamer.description} />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo title={streamer.display_name} description={streamer.description} />
 
       <Layout>
         <Link href="/">

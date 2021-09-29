@@ -2,7 +2,6 @@ import { NextSeo } from "next-seo";
 import Layout from "@components/Layout";
 import PageTitle from "@components/PageTitle";
 import styles from "@styles/Typography.module.css";
-import Config from "@utils/Config";
 
 export default function Backstage() {
   return (

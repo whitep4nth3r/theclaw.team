@@ -1,8 +1,9 @@
 export default {
+  titleTemplate: "%s | The Claw Stream Team",
   openGraph: {
     type: "website",
-    locale: "en_EN",
-    url: "https://theclaw.team/",
+    locale: "en_US",
+    url: "https://theclaw.team",
     site_name: "The Claw Stream Team",
   },
   twitter: {
@@ -32,7 +33,7 @@ export default {
     {
       rel: "mask-icon",
       href: "/safari-pinned-tab.svg",
-      color: "#0f111a",
+      color: "#f1101a",
     },
     {
       rel: "icon",

@@ -8,10 +8,7 @@ import Config from "@utils/Config";
 export default function CodeOfConduct({ page }) {
   return (
     <>
-      <NextSeo
-        title={`${page.title}${Config.pageTitleSuffix}`}
-        description={page.metaDescription}
-      />
+      <NextSeo title={page.title} description={page.metaDescription} />
       <Layout>
         <PageTitle title={page.title} />
         <RichText content={page.content} />
