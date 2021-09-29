@@ -3,7 +3,6 @@ import Layout from "@components/Layout";
 import ContentfulData from "@utils/ContentfulData";
 import RichText from "@components/RichText";
 import PageTitle from "@components/PageTitle";
-import Config from "@utils/Config";
 
 export default function CodeOfConduct({ page }) {
   return (

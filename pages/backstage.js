@@ -6,10 +6,7 @@ import styles from "@styles/Typography.module.css";
 export default function Backstage() {
   return (
     <>
-      <NextSeo
-        title={`Backstage${Config.pageTitleSuffix}`}
-        description="Backstage area coming soon for team members"
-      />
+      <NextSeo title="Backstage" description="Backstage area coming soon for team members" />
 
       <Layout>
         <PageTitle title="Backstage" />
