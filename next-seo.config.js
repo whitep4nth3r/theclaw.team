@@ -17,7 +17,7 @@ export default {
     },
     {
       name: "theme-color",
-      content: "#01101a",
+      content: "#f1101a",
     },
   ],
   additionalLinkTags: [
