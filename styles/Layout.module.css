@@ -2,7 +2,7 @@
   display: grid;
   grid-template-areas:
     "bar"
-    "main";
+    "wrapper";
 }
 
 .layout__brandBar {
@@ -12,9 +12,12 @@
   justify-content: center;
 }
 
+.layout__wrapper {
+  grid-area: wrapper;
+}
+
 .layout__main {
-  grid-area: main;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .layout__brandBarMoth {
@@ -30,9 +33,13 @@
 @media screen and (min-width: 1080px) {
   .layout {
     grid-template-columns: 1fr 3fr;
-    grid-template-areas: "bar main main main";
+    grid-template-areas: "bar wrapper wrapper wrapper";
     justify-content: flex-start;
     background: var(--color-bg);
+  }
+
+  .layout__brandBar {
+    min-height: 100vh;
   }
 
   .layout__brandBarInner {

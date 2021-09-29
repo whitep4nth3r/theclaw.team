@@ -1,6 +1,7 @@
 import Styles from "@styles/Layout.module.css";
 import Header from "@components/Header";
 import MothBanner from "@components/Svg/MothBanner";
+import Footer from "@components/Footer";
 
 export default function Layout({ children }) {
   return (
@@ -12,9 +13,10 @@ export default function Layout({ children }) {
           </span>
         </div>
       </div>
-      <div className={Styles.layout__main}>
+      <div className={Styles.layout__wrapper}>
         <Header />
-        <div className={Styles.layout__main}>{children}</div>
+        <main className={Styles.layout__main}>{children}</main>
+        <Footer />
       </div>
     </div>
   );

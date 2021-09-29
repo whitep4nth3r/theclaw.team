@@ -1,12 +1,32 @@
 .typography__h1 {
-  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-size: clamp(2.4rem, 4vw, 4rem);
   line-height: 1.5;
   margin-bottom: 3rem;
   letter-spacing: 1px;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-main);
-  color: var(--color-fg);
+  color: var(--yellow);
   text-transform: uppercase;
+}
+
+.typography__h2 {
+  font-size: clamp(2.4rem, 3vw, 3rem);
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  color: var(--yellow);
+}
+
+.typography__h3 {
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  line-height: 1.3;
+  margin-bottom: 3rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-main);
+  color: var(--white);
+  padding-bottom: 1rem;
+  border-bottom: 0.125rem solid var(--red);
 }
 
 .typography__body {
@@ -17,4 +37,45 @@
   font-family: var(--font-family-main);
   color: var(--color-fg);
   word-break: break-word;
+}
+
+.typography__body i {
+  font-style: italic;
+}
+
+.typography__body b {
+  font-weight: var(--font-weight-bold);
+}
+
+.typography__hr {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  border-color: transparent;
+  border-bottom: 0.25rem solid var(--yellow);
+}
+
+.typography__li {
+}
+
+.typography__ol {
+  padding: 0;
+  padding-left: 3rem;
+}
+
+.typography__ul {
+  list-style: square;
+  padding-left: 3rem;
+}
+
+.typography__a {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.125rem;
+  color: var(--yellow);
+}
+
+.typography__a:focus,
+.typography__a:active {
+  outline: none;
+  box-shadow: var(--focus-box-shadow);
 }

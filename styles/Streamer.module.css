@@ -46,7 +46,7 @@
   grid-area: heading;
   font-size: clamp(2rem, 8vw, 8rem);
   font-weight: var(--font-weight-bold);
-  color: var(--white);
+  color: var(--yellow);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;

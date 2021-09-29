@@ -1,15 +1,30 @@
 export default class ContentfulData {
   static async getPageContent(slug) {
     const query = `{
-      pageCollection(where: {slug: "${slug}"}) {
+      pageCollection(where: {slug: "${slug}"}, limit: 1) {
         items {
           sys {
             id
           }
           slug
           title
+          metaDescription
           content {
             json
+            links {
+              entries {
+                inline {
+                  __typename
+                  ... on Page {
+                    sys {
+                      id
+                    }
+                    title
+                    slug
+                  }
+                }
+              }
+            }
           }
         }
       }

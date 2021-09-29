@@ -64,7 +64,7 @@ export default function Streamer({ streamer }) {
 
           <div className={styles.streamer__emotes}>
             {transformedEmotes.map((emote) => (
-              <img src={emote.imageUrl} alt={emote.name} />
+              <img src={emote.imageUrl} alt={emote.name} key={emote.name} />
             ))}
           </div>
 
@@ -82,8 +82,6 @@ export default function Streamer({ streamer }) {
             />
           </div>
         </main>
-
-        <Footer />
       </Layout>
     </>
   );

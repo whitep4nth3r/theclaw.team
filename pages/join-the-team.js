@@ -4,23 +4,23 @@ import Layout from "@components/Layout";
 import ContentfulData from "@utils/ContentfulData";
 import RichText from "@components/RichText";
 import PageTitle from "@components/PageTitle";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Config from "@utils/Config";
 
 export default function JoinTheTeam({ page }) {
   return (
     <>
       <Head>
-        <title>TITLE TODO</title>
-        <meta name="description" content="The Code of Conduct for The Claw Stream Team" />
+        <title>
+          {page.title}
+          {Config.pageTitleSuffix}
+        </title>
+        <meta name="description" content={page.metaDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
-        <main>
-          <PageTitle title={page.title} />
-          <RichText content={page.content.json} />
-        </main>
-        <Footer />
+        <PageTitle title={page.title} />
+        <RichText content={page.content} />
       </Layout>
     </>
   );

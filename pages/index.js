@@ -7,25 +7,24 @@ import Streamers from "@components/Streamers";
 import RichText from "@components/RichText";
 import PageTitle from "@components/PageTitle";
 
+import Config from "@utils/Config";
+
 export default function Home({ streamers, page }) {
   return (
     <>
       <Head>
-        <title>The Claw Stream Team | Build stuff, learn things, love what you do</title>
-        <meta
-          name="description"
-          content="Build stuff, learn things, love what you do. The Claw is science and technology — for everyone."
-        />
+        <title>
+          {page.title}
+          {Config.pageTitleSuffix}
+        </title>
+        <meta name="description" content={page.metaDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
-        <main>
-          <PageTitle title={page.title} />
-          <RichText content={page.content.json} />
-          <Streamers streamers={streamers} />
-        </main>
-        <Footer />
+        <PageTitle title={page.title} />
+        <RichText content={page.content} />
+        <Streamers streamers={streamers} />
       </Layout>
     </>
   );

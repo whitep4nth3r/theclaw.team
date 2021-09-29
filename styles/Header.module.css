@@ -30,8 +30,9 @@
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
   text-align: center;
+  letter-spacing: 1px;
   display: block;
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
 .header__navListItemLink:focus {
