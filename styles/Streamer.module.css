@@ -44,7 +44,7 @@
 
 .streamer__name {
   grid-area: heading;
-  font-size: clamp(2rem, 8vw, 8rem);
+  font-size: clamp(2rem, 7vw, 7rem);
   font-weight: var(--font-weight-bold);
   color: var(--yellow);
   text-transform: uppercase;
