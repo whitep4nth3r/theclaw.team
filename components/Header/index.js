@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Styles from "@styles/Header.module.css";
+import LoggedInUser from "@components/LoggedInUser";
 
 export default function Header() {
   return (
@@ -18,7 +19,7 @@ export default function Header() {
           </li>
           <li>
             <Link href="/code-of-conduct">
-              <a className={Styles.header__navListItemLink}>COC</a>
+              <a className={Styles.header__navListItemLink}>CoC</a>
             </Link>
           </li>
           <li>
@@ -28,6 +29,8 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+
+      <LoggedInUser />
     </header>
   );
 }
