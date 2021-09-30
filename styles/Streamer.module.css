@@ -67,7 +67,7 @@
   border-radius: 0.25rem;
   font-size: 1rem;
   padding: 1rem;
-  background-color: #9147ff;
+  background-color: var(--twitch-purple);
   color: #ffffff;
   text-decoration: none;
 }
