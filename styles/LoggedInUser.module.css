@@ -1,0 +1,39 @@
+.loggedInUser {
+  display: inline-grid;
+  grid-template-columns: 1fr 15fr;
+  gap: 0.5rem 1rem;
+  padding: 2rem;
+  grid-template-areas:
+    "image name"
+    "image cta";
+}
+
+.loggedInUser__image {
+  grid-area: image;
+  border-radius: 50%;
+  border: 0.125rem solid var(--yellow);
+}
+
+.loggedInUser__name {
+  grid-area: name;
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--yellow);
+  align-self: flex-end;
+  display: inline-flex;
+}
+
+.loggedInUser__cta {
+  grid-area: cta;
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  text-decoration-thickness: 0.125rem;
+  align-self: flex-start;
+  display: inline-flex;
+}
+
+.loggedInUser__signOut:focus {
+  outline: none;
+  box-shadow: var(--focus-box-shadow);
+}

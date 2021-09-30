@@ -8,8 +8,13 @@ export default class TeamData {
   }
 
   static async getStreamer(username) {
-    const streamers = await TeamData.getStreamers();
+    const streamers = await this.getStreamers();
     const streamer = streamers.filter((streamer) => streamer.login === username).pop();
     return streamer;
+  }
+
+  static async getStreamerLogins() {
+    const streamers = await this.getStreamers();
+    return streamers.map((streamer) => streamer.login);
   }
 }
