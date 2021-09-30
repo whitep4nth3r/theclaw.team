@@ -2,7 +2,6 @@ import Styles from "@styles/Layout.module.css";
 import Header from "@components/Header";
 import MothBanner from "@components/Svg/MothBanner";
 import Footer from "@components/Footer";
-import LoggedInUser from "@components/LoggedInUser";
 
 export default function Layout({ children }) {
   return (
