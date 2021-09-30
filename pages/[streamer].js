@@ -84,15 +84,15 @@ export default function Streamer({ streamer }) {
 }
 
 export async function getStaticPaths() {
-  const streamers = await TeamData.getStreamers();
+  const streamers = await TeamData.getStreamerLogins();
 
   const paths = streamers.map((streamer) => {
-    return { params: { streamer: streamer.login } };
+    return { params: { streamer } };
   });
 
   return {
     paths,
-    fallback: "blocking",
+    fallback: false,
   };
 }
 
