@@ -15,6 +15,6 @@ export default class TeamData {
 
   static async getStreamerLogins() {
     const streamers = await this.getStreamers();
-    return streamers.map((streamer) => streamer.login);
+    return streamers.map((streamer) => streamer.login.toLowerCase());
   }
 }
