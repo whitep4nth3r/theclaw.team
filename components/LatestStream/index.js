@@ -2,6 +2,10 @@ import styles from "@styles/LatestStream.module.css";
 import CheckMark from "@components/Svg/CheckMark";
 
 export default function LatestStream({ stream, avatarUrl, isPartner, name, live }) {
+  if (!stream) {
+    return null;
+  }
+
   return (
     <>
       <h3 className={styles.latestStream__header}>Latest stream</h3>
