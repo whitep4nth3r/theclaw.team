@@ -40,7 +40,6 @@ body {
   background-size: 9rem;
   min-height: 100vh;
 
-  background-color: var(--color-bg);
   color: var(--color-fg);
 }
 

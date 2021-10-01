@@ -1,0 +1,39 @@
+.overlay__container {
+  height: 1080px;
+  width: 1920px;
+  background-color: transparent;
+  padding: 2rem;
+}
+
+.overlay__one__topLeft {
+  display: grid;
+  width: 380px;
+  grid-template-columns: 2fr 4fr;
+  column-gap: 1rem;
+  grid-template-areas:
+    "one_moth ."
+    "one_moth one_url"
+    "one_moth .";
+}
+
+.overlay__one__moth {
+  grid-area: one_moth;
+  width: 120px;
+  z-index: 2;
+}
+
+.overlay__one__url {
+  /* transform: translateX(-200%); */
+  z-index: 1;
+  grid-area: one_url;
+  display: inline-grid;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: var(--font-weight-bold);
+  padding: 1rem;
+  text-align: center;
+  border: 0.25rem solid var(--yellow);
+  box-shadow: 0.5rem 0.5rem 0 0 var(--red);
+}

@@ -18,3 +18,17 @@
   width: 2rem;
   margin-right: 0.5rem;
 }
+
+.backstage__overlayLink {
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: var(--font-weight-bold);
+  text-decoration-thickness: 0.125rem;
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+}
+
+.backstage__overlayLink:focus {
+  outline: none;
+  box-shadow: var(--focus-box-shadow);
+}

@@ -1,10 +1,11 @@
-import { useSession, signIn } from "next-auth/client";
+import { useSession, getSession, signIn } from "next-auth/client";
 import { NextSeo } from "next-seo";
 import Layout from "@components/Layout";
 import PageTitle from "@components/PageTitle";
 import typography from "@styles/Typography.module.css";
 import styles from "@styles/Backstage.module.css";
 import Twitch from "@components/Svg/Twitch";
+import Link from "next/link";
 
 export default function Backstage() {
   const [session, loading] = useSession();
@@ -25,6 +26,9 @@ export default function Backstage() {
               Coming soon! Here you'll find branded overlays and other fun things that you can
               access when logged in via Twitch.
             </p>
+            <Link href="/backstage/overlays/one">
+              <a className={styles.backstage__overlayLink}>ONE</a>
+            </Link>
           </>
         )}
         {!session && (
@@ -48,4 +52,12 @@ export default function Backstage() {
       </Layout>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  return {
+    props: {
+      session: await getSession(context),
+    },
+  };
 }
