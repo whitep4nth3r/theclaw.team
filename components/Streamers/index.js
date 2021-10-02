@@ -15,6 +15,7 @@ export default function Streamers({ streamers }) {
                 bio={streamer.description}
                 live={streamer.online}
                 isPartner={streamer.broadcaster_type === "partner"}
+                hasBanner={false}
               />
             </a>
           </Link>
