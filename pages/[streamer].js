@@ -31,7 +31,7 @@ export default function Streamer({ streamer }) {
           <a className={styles.streamer__backLink}>Back to all streamers</a>
         </Link>
 
-        <main className={styles.streamer}>
+        <div className={styles.streamer}>
           <h1 className={styles.streamer__name}>{streamer.display_name}</h1>
           <div className={styles.streamer__header}>
             <a
@@ -77,7 +77,7 @@ export default function Streamer({ streamer }) {
               live={streamer.online}
             />
           </div>
-        </main>
+        </div>
       </Layout>
     </>
   );
