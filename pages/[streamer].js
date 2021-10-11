@@ -19,7 +19,7 @@ function transformEmotes(emotes) {
     : [];
 }
 
-export default function Streamer({ streamer }) {
+export default function Streamer({ streamer, hasBanner }) {
   const transformedEmotes = transformEmotes(streamer.emotes);
 
   return (
@@ -32,7 +32,7 @@ export default function Streamer({ streamer }) {
         </Link>
 
         <div className={styles.streamer}>
-          <h1 className={styles.streamer__name}>{streamer.display_name}</h1>
+          {!hasBanner && <h1 className={styles.streamer__name}>{streamer.display_name}</h1>}
           <div className={styles.streamer__header}>
             <a
               href={`https://twitch.tv/${streamer.login}`}
@@ -45,6 +45,7 @@ export default function Streamer({ streamer }) {
                   bio={streamer.description}
                   live={streamer.online}
                   isPartner={streamer.broadcaster_type === "partner"}
+                  hasBanner={false}
                 />
               </div>
             </a>

@@ -1,0 +1,11 @@
+{
+  "ignorePath": "",
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "useEditorConfig": false,
+  "proseWrap": "always",
+  "trailingComma": "all",
+  "jsxBracketSameLine": true,
+  "htmlWhitespaceSensitivity": "ignore"
+}
