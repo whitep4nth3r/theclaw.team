@@ -17,4 +17,10 @@ export default class TeamData {
     const streamers = await this.getStreamers();
     return streamers.map((streamer) => streamer.login.toLowerCase());
   }
+
+  static async getWhosNext(){
+    return await fetch(
+      "https://jwalter-teamschedule.builtwithdark.com/whosnext"
+    ).then(response => response.json());
+  }
 }

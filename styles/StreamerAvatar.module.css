@@ -2,7 +2,6 @@
   position: relative;
   margin-bottom: 2rem;
   overflow: hidden;
-  border: 1px solid red;
   background-color: var(--black);
   box-shadow: 0.5rem 0.5rem 0 0 var(--purple);
   border: 0.25rem solid var(--white);
