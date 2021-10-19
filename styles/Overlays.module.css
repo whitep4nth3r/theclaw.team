@@ -84,7 +84,7 @@
   align-items: center;
   justify-content: center;
   flex-grow: 0;
-  min-width: 320px;
+  min-width: 400px;
   max-height:120px;
   background-color: var(--black);
   color: var(--white);
