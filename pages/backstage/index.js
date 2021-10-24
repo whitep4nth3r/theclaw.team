@@ -26,9 +26,18 @@ export default function Backstage() {
               Coming soon! Here you'll find branded overlays and other fun things that you can
               access when logged in via Twitch.
             </p>
-            <Link href="/backstage/overlays/one">
-              <a className={styles.backstage__overlayLink}>ONE</a>
-            </Link>
+            <ul>
+              <li>
+                <Link href="/backstage/overlays/one">
+                  <a className={styles.backstage__overlayLink}>ONE</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/backstage/overlays/whos-next">
+                  <a className={styles.backstage__overlayLink}>WHOS NEXT</a>
+                </Link>
+              </li>
+            </ul>
           </>
         )}
         {!session && (
