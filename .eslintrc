@@ -1,5 +1,5 @@
 {
-  "extends": ["prettier", "plugin:@next/next/recommended"],
+  "extends": ["next", "prettier", "plugin:@next/next/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error"]

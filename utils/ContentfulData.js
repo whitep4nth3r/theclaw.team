@@ -1,7 +1,47 @@
 export default class ContentfulData {
+  static async getAwardNominationsByYear(year) {
+    const variables = { year };
+
+    const query = `query getAwardNominationsByYear($year: String!){
+      awardCategoryCollection(where: { year: $year }) {
+        items {
+          sys{
+            id
+          }
+          name
+          linkedFrom {
+            awardNominationCollection(limit: 10) {
+              total
+              items {
+                sys{
+                  id
+                }
+                nominee
+                externalLink
+                isWinner
+                description
+                image {
+                  url
+                  description
+                  title
+                  height
+                  width
+                }
+              }
+            }
+          }
+        }
+      }
+    }`;
+
+    const data = await ContentfulData.callApi(query, variables);
+    return data.awardCategoryCollection.items;
+  }
+
   static async getPageContent(slug) {
-    const query = `{
-      pageCollection(where: {slug: "${slug}"}, limit: 1) {
+    const variables = { slug };
+    const query = `query getPageContentBySlug($slug: String!){
+      pageCollection(where: {slug: $slug}, limit: 1) {
         items {
           sys {
             id
@@ -30,11 +70,11 @@ export default class ContentfulData {
       }
     }`;
 
-    const content = await ContentfulData.callApi(query);
+    const content = await ContentfulData.callApi(query, variables);
     return content.pageCollection.items[0];
   }
 
-  static async callApi(query) {
+  static async callApi(query, variables = {}) {
     try {
       const response = await fetch(
         `https://graphql.contentful.com/content/v1/spaces/${process.env.CTFL_SPACE_ID}/environments/master`,
@@ -44,7 +84,7 @@ export default class ContentfulData {
             Authorization: `Bearer ${process.env.CTFL_ACCESS_TOKEN}`,
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ query }),
+          body: JSON.stringify({ query, variables }),
         },
       ).then((response) => {
         return response.json();

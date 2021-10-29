@@ -9,3 +9,9 @@
 .item {
   text-decoration: none;
 }
+
+.item:focus {
+  outline: none;
+  display: block;
+  box-shadow: var(--focus-box-shadow);
+}

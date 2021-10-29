@@ -33,7 +33,8 @@
   display: inline-flex;
 }
 
-.loggedInUser__signOut:focus {
+.loggedInUser__signOut:focus,
+.loggedInUser__cta:focus {
   outline: none;
   box-shadow: var(--focus-box-shadow);
 }
