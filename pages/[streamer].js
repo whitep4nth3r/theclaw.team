@@ -9,6 +9,7 @@ import LatestStream from "@components/LatestStream";
 import Twitch from "@components/Svg/Twitch";
 import { transformEmotes } from "@utils/Tools";
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrl } from "@utils/OpenGraph";
+import { getRandomEntry } from "@whitep4nth3r/get-random-entry";
 
 //todo
 // upload font and use (work sans)
@@ -16,13 +17,26 @@ import { IMG_WIDTH, IMG_HEIGHT, generateImageUrl } from "@utils/OpenGraph";
 // add streamer description
 // emotes?????
 
+function getEmotesForOg(emotes) {
+  const emoteGroup = new Set();
+
+  const returnArraySize = emotes.length >= 5 ? 5 : emotes.length;
+
+  while (emoteGroup.size < returnArraySize) {
+    let newRandomEntry = getRandomEntry(emotes);
+    emoteGroup.add(newRandomEntry.imageUrl);
+  }
+
+  return Array.from(emoteGroup);
+}
+
 export default function Streamer({ streamer, hasBanner }) {
   const transformedEmotes = transformEmotes(streamer.emotes);
 
   const imageUrl = generateImageUrl({
     streamerName: streamer.display_name,
-    bio: streamer.description.slice(0, 200) + "...",
     avatarUrl: streamer.profile_image_url,
+    emoteUrls: getEmotesForOg(transformedEmotes),
   });
 
   console.log(imageUrl);
