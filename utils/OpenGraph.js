@@ -20,13 +20,13 @@ export function generateImageUrl({ streamerName, avatarUrl, emoteUrls }) {
   const avatarUrlb64 = Buffer.from(avatarUrl).toString("base64");
   const avatarTransformations = [
     "r_max",
-    "bo_6px_solid_rgb:ffb626",
+    "bo_4px_solid_rgb:ffb626",
     "w_200",
     "h_200",
     "c_fill",
     "g_north_west",
   ].join(",");
-  const avatarPlacementQualifiers = [`x_${xBasePosition}`, "y_120"].join(",");
+  const avatarPlacementQualifiers = [`x_${xBasePosition - 20}`, "y_100"].join(",");
   const avatarConfig = `l_fetch:${avatarUrlb64}/${avatarTransformations}/fl_layer_apply,${avatarPlacementQualifiers}`;
 
   const emoteConfig = [];
@@ -47,7 +47,7 @@ export function generateImageUrl({ streamerName, avatarUrl, emoteUrls }) {
   const nameConfig = [
     `w_600`,
     "c_fit",
-    "co_rgb:ffb626",
+    "co_rgb:ffffff",
     `x_${xBasePosition}`,
     "y_30",
     "g_north_west",
@@ -59,17 +59,17 @@ export function generateImageUrl({ streamerName, avatarUrl, emoteUrls }) {
   const sloganConfig = [
     `w_360`,
     "c_fit",
-    "co_rgb:ffffff",
+    "co_rgb:ffb626",
     `x_${xBasePosition}`,
-    "y_330",
+    "y_390",
     "g_north_west",
-    `l_text:worksansbold.ttf_40_italic:${cleanText("Build stuff, learn things, love what you do")}`,
+    `l_text:worksansbolditalic.ttf_30:${cleanText("Build stuff, learn things, love what you do")}`,
   ].join(",");
 
   const theClawConfig = [
     `w_600`,
     "c_fit",
-    `co_rgb:489fb9`,
+    `co_rgb:82af3a`,
     `x_${xBasePosition}`,
     "y_160",
     "g_north_west",
