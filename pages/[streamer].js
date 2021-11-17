@@ -11,12 +11,6 @@ import { transformEmotes } from "@utils/Tools";
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrl } from "@utils/OpenGraph";
 import { getRandomEntry } from "@whitep4nth3r/get-random-entry";
 
-//todo
-// upload font and use (work sans)
-// add streamer avatar onto base image
-// add streamer description
-// emotes?????
-
 function getEmotesForOg(emotes) {
   const emoteGroup = new Set();
 
@@ -38,8 +32,6 @@ export default function Streamer({ streamer, hasBanner }) {
     avatarUrl: streamer.profile_image_url,
     emoteUrls: getEmotesForOg(transformedEmotes),
   });
-
-  console.log(imageUrl);
 
   const ogUrl = `https://theclaw.team/${streamer.login}`;
   const title = `${streamer.display_name} on The Claw stream team`;
