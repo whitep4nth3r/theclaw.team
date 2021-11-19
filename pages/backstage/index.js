@@ -6,13 +6,47 @@ import typography from "@styles/Typography.module.css";
 import styles from "@styles/Backstage.module.css";
 import Twitch from "@components/Svg/Twitch";
 import Link from "next/link";
+import { IMG_WIDTH, IMG_HEIGHT, generateImageUrlForPage } from "@utils/OpenGraph";
 
 export default function Backstage() {
   const [session, loading] = useSession();
 
+  const page = {
+    title: "Backstage",
+    description: "The Claw backstage area for team members",
+  };
+
+  const imageUrl = generateImageUrlForPage({
+    pageTitle: page.title,
+  });
+
   return (
     <>
-      <NextSeo title="Backstage" description="The Claw backstage area for team members" />
+      <NextSeo
+        title={page.title}
+        description={page.metaDescription}
+        openGraph={{
+          title: page.title,
+          description: page.metaDescription,
+          url: "https://theclaw.team/backstage,",
+          site_name: "The Claw Stream Team",
+          type: "website",
+          locale: "en_US",
+          images: [
+            {
+              url: imageUrl,
+              width: IMG_WIDTH,
+              height: IMG_HEIGHT,
+              alt: `Open Graph Image for the ${page.title} on theclaw.team`,
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@whitep4nth3r",
+          site: "https://whitep4nth3r.com",
+          cardType: "summary_large_image",
+        }}
+      />
 
       <Layout>
         <PageTitle title="Backstage" />
