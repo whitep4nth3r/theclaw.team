@@ -14,67 +14,63 @@ function cleanText(text) {
 export const IMG_WIDTH = 1000;
 export const IMG_HEIGHT = 500;
 
-export function generateImageUrl({ streamerName, avatarUrl, emoteUrls }) {
-  const xBasePosition = 370;
-
+export function generateImageUrl({ streamerName, avatarUrl, emoteUrl }) {
   const avatarUrlb64 = Buffer.from(avatarUrl).toString("base64");
-  const avatarTransformations = [
-    "r_max",
-    "bo_4px_solid_rgb:ffb626",
-    "w_200",
-    "h_200",
-    "c_fill",
-    "g_north_west",
-  ].join(",");
-  const avatarPlacementQualifiers = [`x_${xBasePosition - 20}`, "y_100"].join(",");
+  const avatarTransformations = ["r_max", "w_182", "h_182", "c_fill"].join(",");
+  const avatarPlacementQualifiers = ["x_0", "y_-175"].join(",");
   const avatarConfig = `l_fetch:${avatarUrlb64}/${avatarTransformations}/fl_layer_apply,${avatarPlacementQualifiers}`;
 
-  const emoteConfig = [];
-  const emoteSize = 50;
-  const emoteGutter = 20;
+  const emoteUrlToUse =
+    emoteUrl ||
+    "https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_5d1fd5f891674630984d517d13a35b60/default/light/3.0";
 
-  for (let i = 0; i < emoteUrls.length; i++) {
-    let base64 = Buffer.from(emoteUrls[i]).toString("base64");
-    let transformations = [`w_${emoteSize}`, `h_${emoteSize}`, "c_fit"].join(",");
-    let placementQuals = [
-      `x_${xBasePosition + i * (emoteSize + emoteGutter)}`,
-      "y_230",
-      "g_north_west",
-    ].join(",");
-    emoteConfig.push(`l_fetch:${base64}/${transformations}/fl_layer_apply,${placementQuals}`);
-  }
+  const emoteUrlb64 = Buffer.from(emoteUrlToUse).toString("base64");
+  const emoteTransformations = ["r_max", "w_64", "h_64", "c_fit", "bo_4px_solid_rgb:ffffff"].join(
+    ",",
+  );
+  const emotePlacementQualifiers = ["x_282", "y_123"].join(",");
+  const emoteConfig = `l_fetch:${emoteUrlb64}/${emoteTransformations}/fl_layer_apply,${emotePlacementQualifiers}`;
 
-  const nameConfig = [
+  // DO NOT DELETE, THIS WAS AN ACCOMPLISHMENT
+  // const emoteConfig = [];
+  // const emoteSize = 50;
+  // const emoteGutter = 20;
+
+  // for (let i = 0; i < emoteUrls.length; i++) {
+  //   let base64 = Buffer.from(emoteUrls[i]).toString("base64");
+  //   let transformations = [`w_${emoteSize}`, `h_${emoteSize}`, "c_fit"].join(",");
+  //   let placementQuals = [
+  //     `x_${xBasePosition + i * (emoteSize + emoteGutter)}`,
+  //     "y_230",
+  //     "g_north_west",
+  //   ].join(",");
+  //   emoteConfig.push(`l_fetch:${base64}/${transformations}/fl_layer_apply,${placementQuals}`);
+  // }
+
+  const nameFontSize = 56;
+  const nameFrontY = 10;
+
+  const nameConfigFront = [
     `w_600`,
     "c_fit",
-    "co_rgb:ffffff",
-    `x_${xBasePosition}`,
-    "y_30",
-    "g_north_west",
-    `l_text:worksansbold.ttf_56_letter_spacing_1:${cleanText(
-      `CHECK OUT ${streamerName.toUpperCase()}`,
+    "co_rgb:ffb626",
+    `x_0`,
+    `y_${nameFrontY}`,
+    `l_text:worksansbold.ttf_${nameFontSize}_letter_spacing_1:${cleanText(
+      `${streamerName.toUpperCase()}`,
     )}`,
   ].join(",");
 
-  const sloganConfig = [
-    `w_360`,
-    "c_fit",
-    "co_rgb:ffb626",
-    `x_${xBasePosition}`,
-    "y_390",
-    "g_north_west",
-    `l_text:worksansbolditalic.ttf_30:${cleanText("Build stuff, learn things, love what you do")}`,
-  ].join(",");
-
-  const theClawConfig = [
+  const nameConfigBack = [
     `w_600`,
     "c_fit",
-    `co_rgb:82af3a`,
-    `x_${xBasePosition}`,
-    "y_160",
-    "g_north_west",
-    `l_text:worksansbold.ttf_30_letter_spacing_1:${cleanText("tech streamer at theclaw.team")}`,
-  ];
+    "co_rgb:d90d10",
+    `x_3`,
+    `y_${nameFrontY + 3}`,
+    `l_text:worksansbold.ttf_${nameFontSize}_letter_spacing_1:${cleanText(
+      `${streamerName.toUpperCase()}`,
+    )}`,
+  ].join(",");
 
   // configure social media image dimensions, quality, and format
   const imageConfig = [`w_${IMG_WIDTH}`, `h_${IMG_HEIGHT}`, "c_fill", "q_auto", "f_auto"].join(",");
@@ -86,11 +82,10 @@ export function generateImageUrl({ streamerName, avatarUrl, emoteUrls }) {
     "image",
     "upload",
     avatarConfig,
-    emoteConfig.join("/"),
+    emoteConfig,
     imageConfig,
-    nameConfig,
-    sloganConfig,
-    theClawConfig,
+    nameConfigBack,
+    nameConfigFront,
     "the_claw_og_base.png",
   ];
 
