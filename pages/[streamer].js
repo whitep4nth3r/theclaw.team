@@ -18,7 +18,7 @@ export default function Streamer({ streamer, hasBanner }) {
   const imageUrl = generateImageUrl({
     streamerName: streamer.display_name,
     avatarUrl: streamer.profile_image_url,
-    emoteUrl: getRandomEntry(plainEmoteUrlArray),
+    emoteUrl: plainEmoteUrlArray.length ? getRandomEntry(plainEmoteUrlArray) : null,
   });
 
   const ogUrl = `https://theclaw.team/${streamer.login}`;

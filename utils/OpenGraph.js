@@ -20,7 +20,11 @@ export function generateImageUrl({ streamerName, avatarUrl, emoteUrl }) {
   const avatarPlacementQualifiers = ["x_0", "y_-175"].join(",");
   const avatarConfig = `l_fetch:${avatarUrlb64}/${avatarTransformations}/fl_layer_apply,${avatarPlacementQualifiers}`;
 
-  const emoteUrlb64 = Buffer.from(emoteUrl).toString("base64");
+  const emoteUrlToUse =
+    emoteUrl ||
+    "https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_5d1fd5f891674630984d517d13a35b60/default/light/3.0";
+
+  const emoteUrlb64 = Buffer.from(emoteUrlToUse).toString("base64");
   const emoteTransformations = ["r_max", "w_64", "h_64", "c_fit", "bo_4px_solid_rgb:ffffff"].join(
     ",",
   );
