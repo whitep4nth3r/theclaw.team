@@ -7,17 +7,18 @@ import StreamerAvatar from "@components/StreamerAvatar";
 import StreamerSchedule from "@components/StreamerSchedule";
 import LatestStream from "@components/LatestStream";
 import Twitch from "@components/Svg/Twitch";
-import { transformEmotes, getEmotesForOg } from "@utils/Tools";
+import { transformEmotes } from "@utils/Tools";
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrl } from "@utils/OpenGraph";
-
+import { getRandomEntry } from "@whitep4nth3r/get-random-entry";
 
 export default function Streamer({ streamer, hasBanner }) {
   const transformedEmotes = transformEmotes(streamer.emotes);
+  const plainEmoteUrlArray = transformedEmotes.map((emote) => emote.imageUrl);
 
   const imageUrl = generateImageUrl({
     streamerName: streamer.display_name,
     avatarUrl: streamer.profile_image_url,
-    emoteUrls: getEmotesForOg(transformedEmotes),
+    emoteUrl: getRandomEntry(plainEmoteUrlArray),
   });
 
   const ogUrl = `https://theclaw.team/${streamer.login}`;
