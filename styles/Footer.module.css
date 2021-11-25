@@ -1,5 +1,14 @@
 .footer {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  color: var(--white);
 }

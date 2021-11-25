@@ -1,6 +1,6 @@
 import Link from "next/link";
+import JoinDiscord from "@components/JoinDiscord";
 import Styles from "@styles/Header.module.css";
-import LoggedInUser from "@components/LoggedInUser";
 
 export default function Header() {
   return (
@@ -29,8 +29,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-
-      <LoggedInUser />
+      <JoinDiscord />
     </header>
   );
 }
