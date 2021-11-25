@@ -1,0 +1,50 @@
+.joinDiscord {
+  position: relative;
+  margin: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  border: 0.25rem solid var(--white);
+  overflow: hidden;
+  min-height: 8rem;
+  padding: 2rem 4rem;
+  background-color: var(--red);
+}
+
+.joinDiscord:focus,
+.joinDiscord:hover {
+  outline: none;
+  box-shadow: var(--focus-box-shadow);
+}
+
+.joinDiscord__cta {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-self: center;
+  color: var(--yellow);
+  text-transform: uppercase;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  text-shadow: 2px 2px var(--red-darker);
+  font-weight: var(--font-weight-bold);
+  z-index: 2;
+  padding: 1rem 2rem;
+  background-color: var(--black);
+  border: 0.5rem solid var(--white);
+  box-shadow: 0.5rem 0.5rem 0 0 var(--yellow);
+}
+
+.joinDiscord__bg {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.joinDiscord__bg * {
+  object-fit: cover;
+  width: 100%;
+}
