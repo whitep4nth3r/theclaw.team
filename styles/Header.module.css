@@ -40,9 +40,3 @@
   box-shadow: var(--focus-box-shadow);
   transition: box-shadow var(--global-transition-time);
 }
-
-@media screen and (min-width: 1080px) {
-  .header__navListItemLink {
-    text-align: left;
-  }
-}
