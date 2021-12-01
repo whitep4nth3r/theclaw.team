@@ -1,7 +1,7 @@
 .backstage__signIn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-weight: var(--font-weight-bold);
   border-radius: 0.25rem;
   font-size: 1.2rem;
@@ -9,8 +9,8 @@
   background-color: var(--twitch-purple);
   color: #ffffff;
   text-decoration: none;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: 4rem auto;
+  width: max-content;
 }
 
 .backstage__signIn svg {
@@ -31,4 +31,15 @@
 .backstage__overlayLink:focus {
   outline: none;
   box-shadow: var(--focus-box-shadow);
+}
+
+.backstage__text {
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-main);
+  color: var(--color-fg);
+  word-break: break-word;
+  text-align: center;
 }

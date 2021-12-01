@@ -1,57 +1,42 @@
 .joinDiscord {
   position: relative;
-  min-height: 8rem;
   text-decoration: none;
   display: block;
-  margin: 3rem;
-  max-width: 900px;
-}
-
-.joinDiscord__inner {
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 0.25rem solid var(--white);
-  overflow: hidden;
-  padding: 2rem 4rem;
-  background-color: var(--red);
+  margin: 3rem auto 6rem auto;
+  max-width: calc(100% - 4rem);
+  border: 0.25rem solid var(--yellow);
+  box-shadow: 0.4rem 0.4rem 0 0 var(--red);
+  padding: 1.5rem 2rem;
 }
 
 .joinDiscord:focus,
 .joinDiscord:hover {
+  transition: all var(--global-transition-time);
   outline: none;
   box-shadow: var(--focus-box-shadow);
 }
 
-.joinDiscord__cta {
-  position: relative;
-  display: inline;
-  flex-direction: column;
-  align-self: center;
+.joinDiscord:focus .joinDiscord__cta {
   color: var(--yellow);
-  text-transform: uppercase;
-  font-size: clamp(1.4rem, 2vw, 2rem);
-  text-shadow: 2px 2px var(--red-darker);
-  font-weight: var(--font-weight-bold);
-  z-index: 2;
-  padding: 1rem 2rem;
-  background-color: var(--black);
-  border: 0.25rem solid var(--white);
-  box-shadow: 0.25rem 0.25rem 0 0 var(--yellow);
-  text-decoration: none;
 }
 
-.joinDiscord__ctaNoShadow {
-  text-shadow: none;
+.joinDiscord__cta {
+  display: block;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  text-shadow: 2px 2px var(--red-darker);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--black);
+  text-align: center;
+  text-decoration: none;
 }
 
 .joinDiscord__checkOut {
   color: var(--white);
   font-weight: var(--font-weight-bold);
   z-index: 2;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.75rem;
   background-color: var(--black);
   border: 0.25rem solid var(--white);
   box-shadow: 0.25rem 0.25rem 0 0 var(--yellow);
@@ -64,36 +49,25 @@
   transform: translateX(-50%);
 }
 
-.joinDiscord__bg {
-  position: absolute;
-  z-index: 0;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-
-.joinDiscord__bg * {
-  object-fit: cover;
-  width: 100%;
-}
-
-.joinDiscord__moth {
+.joinDiscord__discord {
   z-index: 5;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  bottom: -4rem;
+  transform: translateX(-50%) rotate(20deg);
+  bottom: -3.5rem;
 }
 
 @media screen and (min-width: 1325px) {
   .joinDiscord {
     margin-left: auto;
     margin-right: auto;
+    padding: 1rem 2rem;
+    max-width: var(--text-content-max-width);
   }
 
-  .joinDiscord__moth {
-    right: -2rem;
-    bottom: -2.5rem;
+  .joinDiscord__discord {
+    right: -1rem;
+    top: -2rem;
     transform: unset;
     left: unset;
     transform: rotate(20deg);
@@ -101,7 +75,7 @@
 
   .joinDiscord__checkOut {
     transform: rotate(-20deg);
-    top: -1.5rem;
-    left: -1.5rem;
+    top: -2rem;
+    left: -3rem;
   }
 }

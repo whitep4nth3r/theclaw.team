@@ -47,6 +47,7 @@
   font-size: clamp(2rem, 7vw, 7rem);
   font-weight: var(--font-weight-bold);
   color: var(--yellow);
+  text-shadow: 2px 2px var(--red);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -136,5 +137,6 @@
 
   .streamer__name {
     text-align: left;
+    text-shadow: 4px 4px var(--red);
   }
 }

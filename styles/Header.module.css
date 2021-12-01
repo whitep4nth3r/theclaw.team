@@ -1,14 +1,7 @@
 .header {
 }
 
-.header__logoContainer:focus {
-  outline: none;
-  box-shadow: var(--focus-box-shadow);
-  transition: box-shadow var(--global-transition-time);
-}
-
 .header__nav {
-  background-color: var(--color-bg);
   width: 100%;
 }
 
@@ -18,6 +11,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 0;
+  background-color: var(--black);
+  border-top: 0.25rem solid var(--red);
+  border-bottom: 0.25rem solid var(--red);
 }
 
 .header__navListItem {
@@ -25,18 +21,43 @@
 }
 
 .header__navListItemLink {
+  font-size: clamp(1.3rem, 2vw, 2rem);
   text-decoration: none;
   color: var(--color-fg);
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
   text-align: center;
+  text-shadow: 3px 3px var(--black);
   letter-spacing: 1px;
-  display: block;
   padding: 2rem;
+  background-color: var(--black);
+  display: block;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .header__navListItemLink:focus {
   outline: none;
-  box-shadow: var(--focus-box-shadow);
+  box-shadow: var(--focus-box-shadow-yellow);
+  color: var(--yellow);
   transition: box-shadow var(--global-transition-time);
+}
+
+@media screen and (min-width: 1080px) {
+  .header__navList {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border-top: unset;
+    border-bottom: unset;
+  }
+
+  .header__navListItemLink {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: 0.25rem solid var(--white);
+    box-shadow: 0.25rem 0.25rem 0 0 var(--yellow);
+  }
 }
