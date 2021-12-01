@@ -54,13 +54,13 @@
   }
 
   .layout__brandBar {
-    min-height: 100vh;
+    display: block;
     background-attachment: fixed;
   }
 
   .layout__brandBarInner {
-    position: fixed;
-    width: unset;
+    position: sticky;
+    top:4rem;
   }
 
   .layout__brandBarMoth {
