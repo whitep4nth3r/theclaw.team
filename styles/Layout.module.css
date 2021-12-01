@@ -17,15 +17,18 @@
   background-position: center center;
 }
 
+.layout__brandBarInner {
+  width: 100%;
+}
+
 .layout__wrapper {
   grid-area: wrapper;
   background-color: var(--color-bg);
-  padding-top: 4rem;
 }
 
 .layout__main {
   padding: 2rem;
-  margin: 4rem auto;
+  margin: 2rem auto 4rem auto;
   max-width: var(--content-max-width);
 }
 
@@ -57,6 +60,7 @@
 
   .layout__brandBarInner {
     position: fixed;
+    width: unset;
   }
 
   .layout__brandBarMoth {

@@ -16,8 +16,10 @@ export default function Layout({ children }) {
         </div>
       </div>
       <div className={styles.layout__wrapper}>
-        <JoinDiscord />
-        <main className={styles.layout__main}>{children}</main>
+        <main className={styles.layout__main}>
+          <JoinDiscord />
+          {children}
+        </main>
         <Footer />
       </div>
     </div>

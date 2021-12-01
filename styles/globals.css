@@ -19,6 +19,7 @@
   --global-transition-time: 0.2s;
 
   --focus-box-shadow: var(--red) 0 0 0 0.25rem;
+  --focus-box-shadow-yellow: var(--yellow) 0 0 0 0.25rem;
 
   --color-bg: var(--black);
   --color-fg: var(--white);
