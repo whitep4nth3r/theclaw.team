@@ -7,6 +7,8 @@
   font-family: var(--font-family-main);
   color: var(--yellow);
   text-transform: uppercase;
+  text-shadow: 3px 3px var(--red);
+  text-align: center;
 }
 
 .typography__h2 {
@@ -26,11 +28,11 @@
   font-family: var(--font-family-main);
   color: var(--white);
   padding-bottom: 1rem;
-  border-bottom: 0.125rem solid var(--red);
+  border-bottom: 0.25rem solid var(--red);
 }
 
 .typography__body {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   margin-bottom: 2rem;
   font-weight: var(--font-weight-normal);

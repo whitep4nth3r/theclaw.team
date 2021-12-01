@@ -1,21 +1,23 @@
-import Styles from "@styles/Layout.module.css";
+import styles from "@styles/Layout.module.css";
 import Header from "@components/Header";
 import MothBanner from "@components/Svg/MothBanner";
 import Footer from "@components/Footer";
+import JoinDiscord from "@components/JoinDiscord";
 
 export default function Layout({ children }) {
   return (
-    <div className={Styles.layout}>
-      <div className={Styles.layout__brandBar}>
-        <div className={Styles.layout__brandBarInner}>
-          <span className={Styles.layout__brandBarMoth}>
+    <div className={styles.layout}>
+      <div className={styles.layout__brandBar}>
+        <div className={styles.layout__brandBarInner}>
+          <span className={styles.layout__brandBarMoth}>
             <MothBanner />
           </span>
+          <Header />
         </div>
       </div>
-      <div className={Styles.layout__wrapper}>
-        <Header />
-        <main className={Styles.layout__main}>{children}</main>
+      <div className={styles.layout__wrapper}>
+        <JoinDiscord />
+        <main className={styles.layout__main}>{children}</main>
         <Footer />
       </div>
     </div>

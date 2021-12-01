@@ -1,4 +1,7 @@
 .richText {
-  max-width: 768px;
-  margin-bottom: 4rem;
+  max-width: var(--text-content-max-width);
+  margin: 0 auto 4rem auto;
+  border-top: 0.25rem solid var(--red);
+  border-bottom: 0.25rem solid var(--red);
+  padding-top: 2rem;
 }

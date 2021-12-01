@@ -10,20 +10,31 @@
   background-color: var(--red);
   display: flex;
   justify-content: center;
+  position: relative;
+  background-image: url("/assets/moth_tile_sm.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .layout__wrapper {
   grid-area: wrapper;
   background-color: var(--color-bg);
+  padding-top: 4rem;
 }
 
 .layout__main {
   padding: 2rem;
+  margin: 4rem auto;
+  max-width: var(--content-max-width);
 }
 
 .layout__brandBarMoth {
   margin: 2rem 1rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 8rem;
 }
 
@@ -41,16 +52,15 @@
 
   .layout__brandBar {
     min-height: 100vh;
+    background-attachment: fixed;
   }
 
   .layout__brandBarInner {
     position: fixed;
-    top: calc(50%);
-    transform: translateY(-50%);
   }
 
   .layout__brandBarMoth {
     height: unset;
-    margin: 2rem 4rem;
+    margin: 4rem;
   }
 }

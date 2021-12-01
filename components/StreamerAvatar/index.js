@@ -1,9 +1,19 @@
 import styles from "@styles/StreamerAvatar.module.css";
 import CheckMark from "@components/Svg/CheckMark";
 import Banner from "@components/Svg/Banner";
-import TeamData from "@utils/TeamData";
+import classNames from "classnames/bind";
 
-export default function StreamerAvatar({ imageUrl, name, bio, live, isPartner, hasBanner }) {
+let cx = classNames.bind(styles);
+
+export default function StreamerAvatar({
+  imageUrl,
+  name,
+  bio,
+  live,
+  isPartner,
+  hasBanner,
+  hasDescription,
+}) {
   const renderBannerAvatar = () => {
     return (
       <>
@@ -24,15 +34,19 @@ export default function StreamerAvatar({ imageUrl, name, bio, live, isPartner, h
           <span className={styles.visuallyHidden}>{name}</span>
           <Banner name={name} />
         </h1>
-        <p className={styles.avatar__description}>{bio}</p>
+        {hasDescription && <p className={styles.avatar__description}>{bio}</p>}
       </>
     );
   };
 
-  const renderSquareAvatar = () => {
+  const renderBaseAvatar = () => {
     return (
       <>
-        <div className={styles.avatar}>
+        <div
+          className={cx({
+            avatar: true,
+            avatar__isLive: live,
+          })}>
           {live && <p className={styles.avatar__live}>Live</p>}
           <img
             className={styles.avatar__img}
@@ -48,10 +62,10 @@ export default function StreamerAvatar({ imageUrl, name, bio, live, isPartner, h
             <h2 className={styles.avatar__name}>@{name}</h2>
           </span>
         </div>
-        <p className={styles.avatar__description}>{bio}</p>
+        {hasDescription && <p className={styles.avatar__description}>{bio}</p>}
       </>
     );
   };
 
-  return <>{hasBanner ? renderBannerAvatar() : renderSquareAvatar()}</>;
+  return <>{hasBanner ? renderBannerAvatar() : renderBaseAvatar()}</>;
 }

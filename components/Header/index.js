@@ -1,5 +1,4 @@
 import Link from "next/link";
-import JoinDiscord from "@components/JoinDiscord";
 import Styles from "@styles/Header.module.css";
 
 export default function Header() {
@@ -29,7 +28,6 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <JoinDiscord />
     </header>
   );
 }

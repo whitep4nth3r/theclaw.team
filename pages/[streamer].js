@@ -73,6 +73,7 @@ export default function Streamer({ streamer, hasBanner }) {
                   live={streamer.online}
                   isPartner={streamer.broadcaster_type === "partner"}
                   hasBanner={false}
+                  hasDescription={true}
                 />
               </div>
             </a>

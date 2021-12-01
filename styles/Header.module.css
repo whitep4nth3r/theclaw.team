@@ -8,7 +8,6 @@
 }
 
 .header__nav {
-  background-color: var(--color-bg);
   width: 100%;
 }
 
@@ -25,11 +24,13 @@
 }
 
 .header__navListItemLink {
+  font-size: clamp(1.3rem, 2vw, 2rem);
   text-decoration: none;
   color: var(--color-fg);
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
   text-align: center;
+  text-shadow: 3px 3px var(--black);
   letter-spacing: 1px;
   display: block;
   padding: 2rem;
@@ -39,4 +40,15 @@
   outline: none;
   box-shadow: var(--focus-box-shadow);
   transition: box-shadow var(--global-transition-time);
+}
+
+@media screen and (min-width: 1080px) {
+  .header__navList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__navListItemLink {
+    padding: 1rem;
+  }
 }

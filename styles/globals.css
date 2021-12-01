@@ -22,6 +22,9 @@
 
   --color-bg: var(--black);
   --color-fg: var(--white);
+
+  --content-max-width: 1280px;
+  --text-content-max-width: 800px;
 }
 
 html {

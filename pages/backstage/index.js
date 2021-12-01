@@ -53,10 +53,10 @@ export default function Backstage() {
 
         {session && (
           <>
-            <h2 className={typography.typography__h3}>
+            <h2 className={styles.backstage__text}>
               Welcome to the super-secret backstage area, {session.user.name}!
             </h2>
-            <p className={typography.typography__body}>
+            <p className={styles.backstage__text}>
               Coming soon! Here you'll find branded overlays and other fun things that you can
               access when logged in via Twitch.
             </p>
@@ -76,7 +76,7 @@ export default function Backstage() {
         )}
         {!session && (
           <>
-            <h2 className={typography.typography__body}>
+            <h2 className={styles.backstage__text}>
               Please log in via Twitch to access the super-secret backstage area — for team members
               only.
             </h2>
