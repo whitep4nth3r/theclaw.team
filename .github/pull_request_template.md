@@ -1,11 +1,3 @@
----
-name: New Pull Request
-about: ""
-title: ""
-labels: ""
-assignees: ""
----
-
 # Description
 
 Please include a summary of the change and which issue is fixed. Please also include relevant
