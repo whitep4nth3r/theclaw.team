@@ -8,7 +8,7 @@ This project showcases The Claw Twitch stream team and uses the following servic
 - Twitch authentication for team members via [next-auth](https://next-auth.js.org/)
 - A DarkLang API developed by [jwalter](https://github.com/jwalter)
 
-
+This project is open source (MIT) and your contributions are welcome!
 
 ## Getting started
 
