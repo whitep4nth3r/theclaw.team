@@ -23,17 +23,21 @@
 .header__navListItemLink {
   font-size: clamp(1.3rem, 2vw, 2rem);
   text-decoration: none;
+  background-color: var(--black);
   color: var(--color-fg);
   text-transform: uppercase;
   font-weight: var(--font-weight-bold);
   text-align: center;
-  text-shadow: 3px 3px var(--black);
   letter-spacing: 1px;
   padding: 2rem;
-  background-color: var(--black);
   display: block;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+}
+
+.header__navListItemLinkActive {
+  background-color: var(--yellow);
+  color: var(--color-bg);
 }
 
 .header__navListItemLink:focus {
@@ -41,6 +45,10 @@
   box-shadow: var(--focus-box-shadow-yellow);
   color: var(--yellow);
   transition: box-shadow var(--global-transition-time);
+}
+
+.header__navListItemLinkActive:focus {
+  color: var(--color-bg);
 }
 
 @media screen and (min-width: 1080px) {
