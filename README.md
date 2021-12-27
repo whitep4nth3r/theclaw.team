@@ -10,6 +10,8 @@ This project showcases The Claw Twitch stream team and uses the following servic
 
 This project is open source (MIT) and your contributions are welcome!
 
+If you discover any issues with the site or would like to request any new features, please submit an issue to the repository,
+
 ## Getting started
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with
