@@ -1,4 +1,4 @@
-# theclaw.team
+# theclaw.team | The Claw Stream Team on Twitch
 
 ![A screenshot of theclaw.team in desktop view showing a red sidebar to the left wiht menu links below the moth logo and the introduction to the team and what it is about on the right](screenshot.png)
 
