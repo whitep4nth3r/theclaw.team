@@ -1,11 +1,9 @@
 export default class TeamData {
   static async getStreamers() {
-    console.time("getStreamers");
     const streamers = await fetch("https://jwalter-teamschedule.builtwithdark.com/schedule").then(
       (response) => response.json(),
     );
 
-    console.timeEnd("getStreamers");
     return streamers;
   }
 
