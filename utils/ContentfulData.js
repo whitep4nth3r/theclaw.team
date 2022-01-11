@@ -39,6 +39,7 @@ export default class ContentfulData {
   }
 
   static async getPageContent(slug) {
+    console.time("getPageContent");
     const variables = { slug };
     const query = `query getPageContentBySlug($slug: String!){
       pageCollection(where: {slug: $slug}, limit: 1) {
@@ -71,6 +72,7 @@ export default class ContentfulData {
     }`;
 
     const content = await ContentfulData.callApi(query, variables);
+    console.timeEnd("getPageContent");
     return content.pageCollection.items[0];
   }
 
