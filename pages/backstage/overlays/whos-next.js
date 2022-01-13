@@ -2,7 +2,7 @@ import { useSession, getSession, signIn } from "next-auth/client";
 import styles from "@styles/Overlays.module.css";
 import { motion } from "framer-motion";
 import TeamData from "@utils/TeamData";
-import StreamerProfileImage from "@components/StreamerProfileImage";
+import SquareStreamerProfileImage from "@components/SquareStreamerProfileImage";
 import { getTimeRemaining } from "@utils/Date";
 import Countdown from "react-countdown";
 
@@ -41,7 +41,7 @@ export default function OverlayWhosNext({ nextUp, avatar, isPartner }) {
             <p>Up Next</p>
           </motion.div>
           <div className={styles.overlay__whosNext__avatar}>
-            <StreamerProfileImage imageUrl={avatar} isPartner={isPartner} />
+            <SquareStreamerProfileImage imageUrl={avatar} isPartner={isPartner} />
           </div>
           <div className={styles.overlay__whosNext__details}>
             <p className={styles.overlay__whosNext__details__streamer}>
