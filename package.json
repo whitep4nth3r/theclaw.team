@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.2.0",
-    "@netlify/plugin-nextjs": "^4.1.1",
     "@whitep4nth3r/get-random-entry": "^0.0.2",
     "classnames": "^2.3.1",
     "framer-motion": "^4.1.17",
