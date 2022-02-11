@@ -38,7 +38,7 @@
   line-height: 1.8;
   margin-bottom: 2rem;
   font-weight: var(--font-weight-normal);
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-body);
   color: var(--color-fg);
   word-break: break-word;
   text-align: center;

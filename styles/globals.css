@@ -41,6 +41,7 @@ body {
   background-repeat: repeat;
   background-size: 9rem;
   min-height: 100vh;
+  display: flex;
 
   color: var(--color-fg);
 }
@@ -48,4 +49,8 @@ body {
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+#__next{
+  display: flex;
 }
