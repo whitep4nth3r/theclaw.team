@@ -1,8 +1,8 @@
 export default class TeamData {
   static async getStreamers() {
-    const streamers = await fetch(
-      "https://jwalter-teamschedule.builtwithdark.com/schedule",
-    ).then((response) => response.json());
+    const streamers = await fetch("https://jwalter-teamschedule.builtwithdark.com/schedule").then(
+      (response) => response.json(),
+    );
 
     return streamers;
   }
@@ -18,9 +18,9 @@ export default class TeamData {
     return streamers.map((streamer) => streamer.login.toLowerCase());
   }
 
-  static async getWhosNext(){
-    return await fetch(
-      "https://jwalter-teamschedule.builtwithdark.com/whosnext"
-    ).then(response => response.json());
+  static async getWhosNext() {
+    return await fetch("https://jwalter-teamschedule.builtwithdark.com/whosnext").then((response) =>
+      response.json(),
+    );
   }
 }

@@ -1,5 +1,4 @@
 import { useSession, getSession, signOut, signIn } from "next-auth/client";
-
 import styles from "@styles/LoggedInUser.module.css";
 
 export default function LoggedInUser() {
