@@ -1,11 +1,10 @@
-import { useSession, getSession, signIn } from "next-auth/client";
+import { useSession, getSession } from "next-auth/client";
 import { NextSeo } from "next-seo";
 import Layout from "@components/Layout";
 import PageTitle from "@components/PageTitle";
-import typography from "@styles/Typography.module.css";
 import styles from "@styles/Backstage.module.css";
-import Twitch from "@components/Svg/Twitch";
 import Link from "next/link";
+import PleaseSignIn from "@components/PleaseSignIn";
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrlForPage } from "@utils/OpenGraph";
 
 export default function Backstage() {
@@ -56,42 +55,27 @@ export default function Backstage() {
             <h2 className={styles.backstage__text}>
               Welcome to the super-secret backstage area, {session.user.name}!
             </h2>
-            <p className={styles.backstage__text}>
-              Coming soon! Here you'll find branded overlays and other fun things that you can
-              access when logged in via Twitch.
-            </p>
-            <ul>
-              <li>
+
+            <Link href="/backstage/onboarding">
+              <a className={styles.backstage__onboardingLink}>Go to onboarding information</a>
+            </Link>
+
+            <p className={styles.backstage__text}>Branded Overlays (add as OBS sources):</p>
+            <ul className={styles.backstage__list}>
+              <li className={styles.backstage__listItem}>
                 <Link href="/backstage/overlays/one">
-                  <a className={styles.backstage__overlayLink}>ONE</a>
+                  <a className={styles.backstage__listItemLink}>The Claw Logo</a>
                 </Link>
               </li>
-              <li>
+              <li className={styles.backstage__listItem}>
                 <Link href="/backstage/overlays/whos-next">
-                  <a className={styles.backstage__overlayLink}>WHOS NEXT</a>
+                  <a className={styles.backstage__listItemLink}>Who's Next Rotator</a>
                 </Link>
               </li>
             </ul>
           </>
         )}
-        {!session && (
-          <>
-            <h2 className={styles.backstage__text}>
-              Please log in via Twitch to access the super-secret backstage area — for team members
-              only.
-            </h2>
-            <a
-              className={styles.backstage__signIn}
-              href="/api/auth/signin"
-              onClick={(e) => {
-                e.preventDefault();
-                signIn();
-              }}>
-              <Twitch />
-              <span>Log in with Twitch</span>
-            </a>
-          </>
-        )}
+        {!session && <PleaseSignIn />}
       </Layout>
     </>
   );
