@@ -56,7 +56,7 @@ export default function Backstage() {
               Welcome to the super-secret backstage area, {session.user.name}!
             </h2>
 
-            <Link href="/backstage/onboarding">
+            <Link href="/onboarding">
               <a className={styles.backstage__onboardingLink}>Go to onboarding information</a>
             </Link>
 
