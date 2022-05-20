@@ -2,6 +2,7 @@
   text-align: center;
   z-index: 10;
   position: relative;
+  line-height: 0.8;
   font-weight: var(--font-weight-heavy);
 }
 
@@ -16,7 +17,7 @@
 }
 
 .moth svg {
-  filter: drop-shadow(1px 1px 10px var(--black));
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.5));
   height: 100%;
 }
 
@@ -67,12 +68,15 @@
   padding: 0 3px;
   display: inline-block;
   font-size: 2rem;
-  color: var(--black);
+  color: var(--white);
   font-family: var(--font-family-heading);
 }
 
 .letter {
-  --base: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, var(--shadow1);
+  --outline-color: black;
+  --base: -2px 0 var(--outline-color), 0 2px var(--outline-color), px 0 var(--outline-color),
+    0 -1px var(--outline-color), var(--shadow1);
+  --base: var(--shadow1);
   --shadow1: -3px 3px var(--yellow);
   --shadow2: -6px 6px var(--green);
   --shadow3: -9px 9px var(--turquoise);
