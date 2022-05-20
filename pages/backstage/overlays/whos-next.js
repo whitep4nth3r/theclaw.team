@@ -77,7 +77,6 @@ export async function getServerSideProps(context) {
   );
 
   const nextUp = nextUpArr[0] ?? null;
-
   const streamer = await TeamData.getStreamer(nextUp.broadcast_name.toLowerCase());
 
   return {
