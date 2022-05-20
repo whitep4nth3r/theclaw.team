@@ -1,5 +1,21 @@
 .text {
   text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.moth {
+  display: block;
+  margin-inline: auto;
+  height: 60px;
+  aspect-ratio: 1/1;
+  position: relative;
+  top: 20px;
+}
+
+.moth svg {
+  filter: drop-shadow(1px 1px 10px var(--black));
+  height: 100%;
 }
 
 @keyframes bounce {
@@ -15,6 +31,7 @@
 @keyframes layerShadow {
   10% {
     text-shadow: var(--base), var(--shadow1);
+    transform: scale(1);
   }
   20% {
     text-shadow: var(--base), var(--shadow1), var(--shadow2);
@@ -24,6 +41,7 @@
   }
   40% {
     text-shadow: var(--base), var(--shadow1), var(--shadow2), var(--shadow3), var(--shadow4);
+    transform: scale(1.2);
   }
   50% {
     text-shadow: var(--base), var(--shadow1), var(--shadow2), var(--shadow3), var(--shadow4),
@@ -33,6 +51,9 @@
     text-shadow: var(--base), var(--shadow1), var(--shadow2), var(--shadow3), var(--shadow4),
       var(--shadow5), var(--shadow6);
   }
+  70% {
+    transform: scale(1);
+  }
 }
 
 .animate .letter {
@@ -41,7 +62,7 @@
 }
 
 .letter {
-  padding: 0 4px;
+  padding: 0 3px;
   display: inline-block;
   font-size: 2rem;
   color: var(--black);
@@ -57,4 +78,24 @@
   --shadow5: -15px 15px var(--pink);
   --shadow6: -18px 18px var(--red);
   text-shadow: var(--base);
+}
+
+.flowerBlue {
+  position: absolute;
+  right: 44%;
+  top: 10%;
+  opacity: 0.8;
+  z-index: 1;
+  filter: drop-shadow(1px 1px 10px var(--black));
+  transform: translate(50%, -50%) rotate(90deg);
+}
+
+.flowerRed {
+  position: absolute;
+  left: 44%;
+  top: 9.5%;
+  opacity: 0.8;
+  z-index: 1;
+  filter: drop-shadow(1px 1px 10px var(--black));
+  transform: translate(-50%, -50%) rotate(180deg);
 }
