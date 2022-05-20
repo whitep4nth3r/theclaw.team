@@ -2,15 +2,17 @@
   text-align: center;
   z-index: 10;
   position: relative;
+  font-weight: var(--font-weight-heavy);
 }
 
 .moth {
   display: block;
   margin-inline: auto;
-  height: 60px;
+  height: 80px;
   aspect-ratio: 1/1;
   position: relative;
   top: 20px;
+  z-index: 9;
 }
 
 .moth svg {
@@ -82,20 +84,26 @@
 
 .flowerBlue {
   position: absolute;
-  right: 44%;
+  right: 48%;
   top: 10%;
-  opacity: 0.8;
   z-index: 1;
-  filter: drop-shadow(1px 1px 10px var(--black));
+  /* filter: drop-shadow(1px 1px 10px var(--black)); */
   transform: translate(50%, -50%) rotate(90deg);
 }
 
 .flowerRed {
   position: absolute;
-  left: 44%;
+  left: 48%;
   top: 9.5%;
-  opacity: 0.8;
   z-index: 1;
-  filter: drop-shadow(1px 1px 10px var(--black));
+  /* filter: drop-shadow(1px 1px 10px var(--black)); */
   transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.blockSeparator {
+  display: block;
+}
+
+.blockSeparator:last-of-type .letter {
+  padding: 0 8.5px;
 }

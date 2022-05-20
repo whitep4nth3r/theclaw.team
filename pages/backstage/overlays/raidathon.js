@@ -52,11 +52,20 @@ export default function Raidathon() {
           text: true,
           animate: isAnimating,
         })}>
-        {"RAIDATHON".split("").map((char, index) => (
-          <span key={`text-${index}`} className={styles.letter} style={{ "--index": index }}>
-            {char}
-          </span>
-        ))}
+        <span className={styles.blockSeparator}>
+          {"THE CLAW TEAM".split("").map((char, index) => (
+            <span key={`text-${index}`} className={styles.letter} style={{ "--index": index }}>
+              {char}
+            </span>
+          ))}
+        </span>
+        <span className={styles.blockSeparator}>
+          {"RAIDATHON".split("").map((char, index) => (
+            <span key={`text2-${index}`} className={styles.letter} style={{ "--index": index + 2 }}>
+              {char}
+            </span>
+          ))}
+        </span>
       </h1>
     </div>
   );

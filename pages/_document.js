@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link
-            href="https://fonts.googleapis.com/css2?family=Ribeye&family=Work+Sans:wght@300;400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Ribeye&family=Work+Sans:wght@400;700;900&display=swap"
             rel="stylesheet"
           />
           <meta name="monetization" content="$ilp.uphold.com/J7y7wkRezRYL" />
