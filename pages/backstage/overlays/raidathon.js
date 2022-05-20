@@ -4,9 +4,9 @@ import OverlayStyles from "@styles/Overlays.module.css";
 import styles from "@styles/Raidathon.module.css";
 import classNames from "classnames/bind";
 import Moth from "@components/Svg/Moth";
-import FlowerRed from "@components/Svg/FlowerRed";
-import FlowerBlue from "@components/Svg/FlowerBlue";
-import { motion } from "framer-motion";
+// import FlowerRed from "@components/Svg/FlowerRed";
+// import FlowerBlue from "@components/Svg/FlowerBlue";
+// import { motion } from "framer-motion";
 
 let cx = classNames.bind(styles);
 
@@ -25,26 +25,22 @@ export default function Raidathon() {
 
   return (
     <div className={OverlayStyles.overlay__container}>
-      <span className={styles.flowerBlue}>
+      <span className={styles.joinDiscord__checkOut}>
+        Check out
+        <span role="img" aria-label="hand pointing down">
+          👇
+        </span>
+      </span>
+      {/* <span className={styles.flowerBlue}>
         <FlowerBlue />
       </span>
       <span className={styles.flowerRed}>
         <FlowerRed />
-      </span>
+      </span> */}
 
-      <motion.div
-        animate={{
-          y: [0, 4, 0],
-        }}
-        transition={{
-          duration: 2,
-          ease: "easeInOut",
-          times: [0, 0.5, 1],
-          repeat: Infinity,
-        }}
-        className={styles.moth}>
+      <div className={styles.moth}>
         <Moth />
-      </motion.div>
+      </div>
 
       <h1
         id="text"

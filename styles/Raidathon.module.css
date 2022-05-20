@@ -1,9 +1,20 @@
 .text {
   text-align: center;
-  z-index: 10;
-  position: relative;
-  line-height: 0.9;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 180px;
+  transform: translate(-50%, -50%);
+  line-height: 1;
   font-weight: var(--font-weight-heavy);
+  font-size: 1rem;
+  background: var(--black);
+  border: 0.25rem solid var(--yellow);
+  box-shadow: 0.4rem 0.4rem 0 0 var(--red);
+  padding: 0.5rem;
+  display: inline-block;
+  width: max-content;
+  margin: 0 auto;
 }
 
 .moth {
@@ -11,9 +22,11 @@
   margin-inline: auto;
   height: 80px;
   aspect-ratio: 1/1;
-  position: relative;
-  top: 20px;
-  z-index: 9;
+  position: absolute;
+  top: 84px;
+  z-index: 2;
+  left: 45%;
+  transform: rotate(20deg);
 }
 
 .moth svg {
@@ -73,16 +86,13 @@
 }
 
 .letter {
-  --outline-color: black;
-  --base: -2px 0 var(--outline-color), 0 2px var(--outline-color), px 0 var(--outline-color),
-    0 -1px var(--outline-color), var(--shadow1);
   --base: var(--shadow1);
-  --shadow1: -3px 3px var(--yellow);
+  --shadow1: -2px 2px var(--red);
   --shadow2: -6px 6px var(--green);
   --shadow3: -9px 9px var(--turquoise);
   --shadow4: -12px 12px var(--purple);
   --shadow5: -15px 15px var(--pink);
-  --shadow6: -18px 18px var(--red);
+  --shadow6: -18px 18px var(--yellow);
   text-shadow: var(--base);
 }
 
@@ -90,8 +100,7 @@
   position: absolute;
   right: 48%;
   top: 10%;
-  z-index: 1;
-  /* filter: drop-shadow(1px 1px 10px var(--black)); */
+  z-index: 2;
   transform: translate(50%, -50%) rotate(90deg);
 }
 
@@ -99,8 +108,7 @@
   position: absolute;
   left: 48%;
   top: 9.5%;
-  z-index: 1;
-  /* filter: drop-shadow(1px 1px 10px var(--black)); */
+  z-index: 2;
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
@@ -109,5 +117,23 @@
 }
 
 .blockSeparator:last-of-type .letter {
-  padding: 0 8.5px;
+  padding: 0 7px;
+  font-size: 3rem;
+}
+
+.joinDiscord__checkOut {
+  color: var(--white);
+  font-weight: var(--font-weight-bold);
+  z-index: 2;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--black);
+  border: 0.25rem solid var(--white);
+  box-shadow: 0.25rem 0.25rem 0 0 var(--yellow);
+  text-decoration: none;
+  text-transform: uppercase;
+  position: absolute;
+  line-height: 1.6;
+  left: 40%;
+  top: 9%;
+  transform: translateX(-50%) rotate(-20deg);
 }
