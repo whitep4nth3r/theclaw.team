@@ -1,0 +1,60 @@
+.text {
+  text-align: center;
+}
+
+@keyframes bounce {
+  10%,
+  90% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20%);
+  }
+}
+
+@keyframes layerShadow {
+  10% {
+    text-shadow: var(--base), var(--shadow1);
+  }
+  20% {
+    text-shadow: var(--base), var(--shadow1), var(--shadow2);
+  }
+  30% {
+    text-shadow: var(--base), var(--shadow1), var(--shadow2), var(--shadow3);
+  }
+  40% {
+    text-shadow: var(--base), var(--shadow1), var(--shadow2), var(--shadow3), var(--shadow4);
+  }
+  50% {
+    text-shadow: var(--base), var(--shadow1), var(--shadow2), var(--shadow3), var(--shadow4),
+      var(--shadow5);
+  }
+  60% {
+    text-shadow: var(--base), var(--shadow1), var(--shadow2), var(--shadow3), var(--shadow4),
+      var(--shadow5), var(--shadow6);
+  }
+}
+
+.animate .letter {
+  animation: bounce 1s both ease-in-out, layerShadow 1.5s ease-in-out;
+  animation-delay: calc(var(--index) * 0.1s);
+}
+
+.letter {
+  padding: 0 4px;
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--black);
+  font-family: var(--font-family-heading);
+}
+
+.letter {
+  --base: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white, var(--shadow1);
+  --shadow1: -3px 3px var(--yellow);
+  --shadow2: -6px 6px var(--green);
+  --shadow3: -9px 9px var(--turquoise);
+  --shadow4: -12px 12px var(--purple);
+  --shadow5: -15px 15px var(--pink);
+  --shadow6: -18px 18px var(--red);
+  text-shadow: var(--base);
+}

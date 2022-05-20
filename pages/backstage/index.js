@@ -72,6 +72,11 @@ export default function Backstage() {
                   <a className={styles.backstage__listItemLink}>Who's Next Rotator</a>
                 </Link>
               </li>
+              <li className={styles.backstage__listItem}>
+                <Link href="/backstage/overlays/raidathon">
+                  <a className={styles.backstage__listItemLink}>Raidathon</a>
+                </Link>
+              </li>
             </ul>
           </>
         )}
