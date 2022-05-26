@@ -10,9 +10,7 @@
 .grid {
   margin-left: auto;
   margin-right: auto;
-  max-width: 400px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -46,5 +44,17 @@
 
 .grid__meta {
   color: var(--white);
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 1080px) {
+  .grid {
+    max-width: 769px;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .grid__meta {
+    text-align: left;
+  }
 }

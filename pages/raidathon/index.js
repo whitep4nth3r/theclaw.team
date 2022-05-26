@@ -5,6 +5,7 @@ import Layout from "@components/Layout";
 import PageTitle from "@components/PageTitle";
 import styles from "@styles/RaidathonPage.module.css";
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrlForPage } from "@utils/OpenGraph";
+import StreamerAvatar from "@components/StreamerAvatar";
 
 export default function Raidathon({ schedule }) {
   useEffect(() => import("@github/time-elements/dist/local-time-element.js"), []);
@@ -59,12 +60,13 @@ export default function Raidathon({ schedule }) {
                 href={`https://twitch.tv/${slot.streamer}`}
                 rel="nofollow"
                 className={styles.grid__linkImg}>
-                <img
-                  src={slot.image}
-                  alt={slot.streamer}
-                  loading="lazy"
-                  height="100"
-                  className={styles.grid__image}
+                <StreamerAvatar
+                  imageUrl={slot.data.profile_image_url}
+                  name={slot.data.display_name}
+                  bio={slot.data.description}
+                  live={slot.data.online}
+                  isPartner={slot.data.broadcaster_type === "partner"}
+                  hasBanner={false}
                 />
               </a>
               <a
@@ -93,75 +95,75 @@ export default function Raidathon({ schedule }) {
 export async function getStaticProps() {
   const streamers = await TeamData.getStreamers();
 
-  const getProfileUrl = (login) => {
-    return streamers.filter((streamer) => streamer.login === login)[0].profile_image_url;
+  const getStreamerData = (login) => {
+    return streamers.filter((streamer) => streamer.login === login)[0];
   };
 
   const schedule = [
     {
       streamer: "ladyofcode",
       time: "2022-06-09T08:00:00Z",
-      image: getProfileUrl("ladyofcode"),
+      data: getStreamerData("ladyofcode"),
     },
     {
       streamer: "splashley",
       time: "2022-06-09T10:00:00Z",
-      image: getProfileUrl("splashley"),
+      data: getStreamerData("splashley"),
     },
     {
       streamer: "toefrog",
       time: "2022-06-09T13:00:00Z",
-      image: getProfileUrl("toefrog"),
+      data: getStreamerData("toefrog"),
     },
     {
       streamer: "finitesingularity",
       time: "2022-06-09T16:00:00Z",
-      image: getProfileUrl("finitesingularity"),
+      data: getStreamerData("finitesingularity"),
     },
     {
       streamer: "matty_twoshoes",
       time: "2022-06-09T19:00:00Z",
-      image: getProfileUrl("matty_twoshoes"),
+      data: getStreamerData("matty_twoshoes"),
     },
     {
       streamer: "metalandcoffee_",
       time: "2022-06-09T22:00:00Z",
-      image: getProfileUrl("metalandcoffee_"),
+      data: getStreamerData("metalandcoffee_"),
     },
     {
       streamer: "ryan_the_rhg",
       time: "2022-06-10T01:00:00Z",
-      image: getProfileUrl("ryan_the_rhg"),
+      data: getStreamerData("ryan_the_rhg"),
     },
     {
       streamer: "haliphax",
       time: "2022-06-10T04:00:00Z",
-      image: getProfileUrl("haliphax"),
+      data: getStreamerData("haliphax"),
     },
     {
       streamer: "whitep4nth3r",
       time: "2022-06-10T07:00:00Z",
-      image: getProfileUrl("whitep4nth3r"),
+      data: getStreamerData("whitep4nth3r"),
     },
     {
       streamer: "splashley",
       time: "2022-06-10T10:00:00Z",
-      image: getProfileUrl("splashley"),
+      data: getStreamerData("splashley"),
     },
     {
       streamer: "ukmadlz",
       time: "2022-06-10T13:00:00Z",
-      image: getProfileUrl("ukmadlz"),
+      data: getStreamerData("ukmadlz"),
     },
     {
       streamer: "sociablesteve",
       time: "2022-06-10T16:00:00Z",
-      image: getProfileUrl("sociablesteve"),
+      data: getStreamerData("sociablesteve"),
     },
     {
       streamer: "tdrayson",
       time: "2022-06-10T19:00:00Z",
-      image: getProfileUrl("tdrayson"),
+      data: getStreamerData("tdrayson"),
     },
   ];
 
@@ -169,5 +171,6 @@ export async function getStaticProps() {
     props: {
       schedule,
     },
+    revalidate: 1,
   };
 }
