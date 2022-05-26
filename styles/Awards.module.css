@@ -29,7 +29,7 @@
 }
 
 .awards__categoryLink:focus {
-  outline: none;
+  outline: transparent;
   box-shadow: var(--focus-box-shadow);
 }
 
