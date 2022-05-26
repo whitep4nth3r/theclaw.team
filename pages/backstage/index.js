@@ -23,10 +23,10 @@ export default function Backstage() {
     <>
       <NextSeo
         title={page.title}
-        description={page.metaDescription}
+        description={page.description}
         openGraph={{
           title: page.title,
-          description: page.metaDescription,
+          description: page.description,
           url: "https://theclaw.team/backstage,",
           site_name: "The Claw Stream Team",
           type: "website",

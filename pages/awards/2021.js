@@ -20,10 +20,10 @@ export default function Awards2021({ awardsData }) {
     <>
       <NextSeo
         title={page.title}
-        description={page.metaDescription}
+        description={page.description}
         openGraph={{
           title: page.title,
-          description: page.metaDescription,
+          description: page.description,
           url: "https://theclaw.team/awards/2021",
           site_name: "The Claw Stream Team",
           type: "website",

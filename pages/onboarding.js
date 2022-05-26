@@ -18,10 +18,10 @@ export default function Onboarding({ page }) {
     <>
       <NextSeo
         title={page.title}
-        description={page.metaDescription}
+        description={page.description}
         openGraph={{
           title: page.title,
-          description: page.metaDescription,
+          description: page.description,
           url: "https://theclaw.team/onboarding,",
           site_name: "The Claw Stream Team — Onboarding",
           type: "website",

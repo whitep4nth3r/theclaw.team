@@ -16,10 +16,10 @@ export default function Home({ streamers, page }) {
     <>
       <NextSeo
         title={page.title}
-        description={page.metaDescription}
+        description={page.description}
         openGraph={{
           title: page.title,
-          description: page.metaDescription,
+          description: page.description,
           url: "https://theclaw.team/",
           site_name: "The Claw Stream Team",
           type: "website",

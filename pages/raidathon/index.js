@@ -12,7 +12,7 @@ export default function Raidathon({ schedule }) {
 
   const page = {
     title: "The Claw Team Raidathon 2022",
-    description: "Check out the schedule for The Claw Team Raidathon 2022",
+    description: "Check out the schedule for The Claw Team Raidathon happening on 9-10 June 2022.",
   };
 
   const imageUrl = generateImageUrlForPage({
@@ -23,10 +23,10 @@ export default function Raidathon({ schedule }) {
     <>
       <NextSeo
         title={page.title}
-        description={page.metaDescription}
+        description={page.description}
         openGraph={{
           title: page.title,
-          description: page.metaDescription,
+          description: page.description,
           url: "https://theclaw.team/raidathon",
           site_name: "The Claw Stream Team",
           type: "website",

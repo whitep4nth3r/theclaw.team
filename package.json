@@ -17,7 +17,7 @@
     "framer-motion": "^4.1.17",
     "next": "^12.0.1",
     "next-auth": "^3.29.0",
-    "next-seo": "^4.28.1",
+    "next-seo": "^5.4.0",
     "next-sitemap": "^1.6.173",
     "react": "17.0.2",
     "react-countdown": "^2.3.2",
