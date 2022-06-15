@@ -1,3 +1,5 @@
+//todo – STORE DATA BLOBS FOR IMAGES IN ONE PLACE
+
 export const data = [
   {
     name: "Most dedicated viewer on Twitch",
@@ -10,7 +12,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/4ZnBiejd6LSmQBWIOZYR0J/dd162fee7674c34518fd1de2a04176ab/9565f024-f108-454a-92f9-74069faf9809-profile_image-300x300.png",
+            url: "/assets/users/steffi128.png",
             description: "A dark and moody black and white photograph of Steffi's face.",
             title: "steffi128",
             height: 300,
@@ -23,7 +25,7 @@ export const data = [
           isWinner: true,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/79uVvShYj3n3Zu8PRew1BJ/e3f30e48e83b5863ac5ddd2239a04409/d51ec9dd-7393-4cb0-b866-387448989d7f-profile_image-300x300.png",
+            url: "/assets/users/ianalexhart.png",
             description: "A photo of Ian snowboarding on a railing in the snow.",
             title: "IanAlexHart",
             height: 300,
@@ -44,7 +46,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/6ktm16ED8qTdZ8bCvMZo96/09f40a851fe76a3efe5517b551b69968/d22fd40c-bff7-4b84-bffd-906bafcc453f-profile_image-300x300.png",
+            url: "/assets/users/tdrayson.png",
             description: "A photograph of tdrayson on a white background.",
             title: "tdrayson",
             height: 300,
@@ -57,7 +59,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/36NIpKe3AGnVsQNpWry6VS/90e5e7f7939dea623e5789fa001c111f/6c7f0d21-a36a-441e-8611-dc390a9fcddf-profile_image-300x300.png",
+            url: "/assets/users/dr_dinomight.png",
             description:
               "A photograph of dr dinomight with the DR symbol overlaid, which is encased in code brackets. The image is tinted yellow and he is against a brick background.",
             title: "dr_dinomight",
@@ -71,7 +73,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/32Wz4ijRR9tVVjRgR7PKvR/27536dd3f5045f2165e6cfc8cf036085/ff90abf3-eb7d-4007-a883-3f83b4c82a85-profile_image-300x300.png",
+            url: "/assets/users/matty_twoshoes.png",
             description: "A photograph of Matty on a bright pinky purple background.",
             title: "matty_twoshoes",
             height: 300,
@@ -84,7 +86,7 @@ export const data = [
           isWinner: true,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/4ZnBiejd6LSmQBWIOZYR0J/dd162fee7674c34518fd1de2a04176ab/9565f024-f108-454a-92f9-74069faf9809-profile_image-300x300.png",
+            url: "/assets/users/steffi128.png",
             description: "A dark and moody black and white photograph of Steffi's face.",
             title: "steffi128",
             height: 300,
@@ -97,7 +99,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/4thXgmGZv3zHZ6TCxJmLua/ef3c101a481a105309da30e97d166b4d/4f07bceb-4017-4df8-aa2c-6125a5eb34ac-profile_image-300x300.png",
+            url: "/assets/users/sketchni.png",
             description: "An illustrated image of Denver holding some kind of magical staff.",
             title: "denverthecoder",
             height: 300,
@@ -118,7 +120,7 @@ export const data = [
           isWinner: true,
           description: "Wear the bunny outfit",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/5Rp6SlTeYnIA54ehZ0kj8R/76247c44a4e241b1e0f042b2db87ab62/3.0",
+            url: "/assets/users/matty_twoshoes.png",
             description:
               "An illustration of Matty in a pink bunny suit. He is also wearing sunglasses.",
             title: "mattyt25Bunnygangsta",
@@ -132,7 +134,7 @@ export const data = [
           isWinner: false,
           description: "OCTOPUS",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/43W7Ohoe0zDJt1KRRc6VQk/63cdab26f42ec3839f318446c2186436/141b74f7-cc0d-44ba-b5eb-5d98cdfab535-profile_image-300x300.png",
+            url: "/assets/users/ukmadlz.png",
             description:
               "A photo of Mike making quite a silly face. He is wearing glasses and headphones.",
             title: "ukmadlz",
@@ -146,7 +148,7 @@ export const data = [
           isWinner: false,
           description: "Time out someone else",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/6RhtMYKjzV93c3KiZz1Csg/f6f7809985af51c1fed67d7d749ccc16/4705a996-9fb5-4e5e-861c-fba1f87c59fe-profile_image-300x300.png",
+            url: "/assets/users/rawwwrs.png",
             description: "A photograph of rawwwrs looking directly at the camera quite close up.",
             title: "rawwwrs",
             height: 300,
@@ -159,7 +161,7 @@ export const data = [
           isWinner: false,
           description: "Let's boom some chalk",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/BAxitBIKvIWpjRt6Up6fw/d71ea13b524f16b579027c9dd1d1d5ca/4799d6f5-6127-4020-9edd-98ed8c9c626b-profile_image-300x300.png",
+            url: "/assets/users/finitesingularity.png",
             description:
               "A photography of finitesingularity on a nice day in a field somewhere. The sky is blue and the trees are green and he is smiling.",
             title: "finitesingularity",
@@ -181,7 +183,7 @@ export const data = [
           isWinner: false,
           description: "The melting webcam",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/37Mox9ucKOFzNpLDTlgJCt/3c47274a291083e278fcd372780098ea/54f10b7a-bd07-440b-94ff-6393d6fda8a3-profile_image-300x300.png",
+            url: "/assets/users/theempressaria.png",
             description: "The empress aria logo which features a mouse pointer on pink background.",
             title: "theempressaria",
             height: 300,
@@ -197,7 +199,7 @@ export const data = [
           isWinner: false,
           description: "WHY IS MY JS NOT COMPILING... npm isn't running",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/4thXgmGZv3zHZ6TCxJmLua/ef3c101a481a105309da30e97d166b4d/4f07bceb-4017-4df8-aa2c-6125a5eb34ac-profile_image-300x300.png",
+            url: "/assets/users/sketchni.png",
             description: "An illustrated image of Denver holding some kind of magical staff.",
             title: "denverthecoder",
             height: 300,
@@ -210,7 +212,7 @@ export const data = [
           isWinner: true,
           description: "Bad internet",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/6RSaLOGMVxPXEgItdkqGEj/7153c784a7b5087b71c920f6d21663f2/ddd150f5-6328-407f-bc9f-c5a9b50b4032-profile_image-300x300.png",
+            url: "/assets/users/lucecarter.png",
             description:
               "An illustrated image of Luce Carter wearing armour and making a heart shape with her hands.",
             title: "lucecarter",
@@ -224,7 +226,7 @@ export const data = [
           isWinner: false,
           description: "Bad internet",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/36NIpKe3AGnVsQNpWry6VS/90e5e7f7939dea623e5789fa001c111f/6c7f0d21-a36a-441e-8611-dc390a9fcddf-profile_image-300x300.png",
+            url: "/assets/users/dr_dinomight.png",
             description:
               "A photograph of dr dinomight with the DR symbol overlaid, which is encased in code brackets. The image is tinted yellow and he is against a brick background.",
             title: "dr_dinomight",
@@ -246,7 +248,7 @@ export const data = [
           isWinner: false,
           description: "MemeBox",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/5FM7Z0XhD4IW6tBKb2n0fV/f9a58d3ddd7bece378ba4cb1d802fbdd/d6ad7e06-0362-48c6-a0c1-048c8d3ec0fc-profile_image-300x300.png",
+            url: "/assets/users/thatn00b__.png",
             description: "An illustration of thatn00b wearing his infamous straw hat.",
             title: "thatn00b__",
             height: 300,
@@ -259,7 +261,7 @@ export const data = [
           isWinner: false,
           description: "VTube Face",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/5FM7Z0XhD4IW6tBKb2n0fV/f9a58d3ddd7bece378ba4cb1d802fbdd/d6ad7e06-0362-48c6-a0c1-048c8d3ec0fc-profile_image-300x300.png",
+            url: "/assets/users/thatn00b__.png",
             description: "An illustration of thatn00b wearing his infamous straw hat.",
             title: "thatn00b__",
             height: 300,
@@ -272,7 +274,7 @@ export const data = [
           isWinner: true,
           description: "The Engineering Quality Project",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/11K928jjc0ww3Ry1vl3byN/bca257a9df6088b5b38b33080f9ab9c0/6f2be457-e8f7-4b37-a7d5-9c9f88357e61-profile_image-300x300.png",
+            url: "/assets/users/sociablesteve.png",
             description:
               "An illustration of sociable Steve drinking a cup of tea from a brown mug. He is wearing a dressing gown.",
             title: "sociablesteve",
@@ -286,7 +288,7 @@ export const data = [
           isWinner: false,
           description: "Streamy McStreamyFace",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/32Wz4ijRR9tVVjRgR7PKvR/27536dd3f5045f2165e6cfc8cf036085/ff90abf3-eb7d-4007-a883-3f83b4c82a85-profile_image-300x300.png",
+            url: "/assets/users/matty_twoshoes.png",
             description: "A photograph of Matty on a bright pinky purple background.",
             title: "matty_twoshoes",
             height: 300,
@@ -307,7 +309,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/6rFDvCYivggZaNn65Uj2gr/831bcbdeb8983d3b30da5e42da6a943e/3.0",
+            url: "/assets/emotes/thatn00b__hype.png",
             description:
               "The word hype in capital letters, which is shiny and gold and covered in multicoloured confetti.",
             title: "thatn0HYPE emote",
@@ -321,7 +323,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/48ULtgkSlDcbzvzNBjdxy0/59d26c1b3328f5b2d6452a6496bb71fa/3.0",
+            url: "/assets/emotes/toefrog__love.png",
             description: "An illustration of the toe frog with heart for eyeball irises.",
             title: "toefroLOVE",
             height: 112,
@@ -334,7 +336,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/3uEPuAszs5wIHov5zZQ5EK/8754f72b6cdd95515724a8da08bd0887/3.0",
+            url: "/assets/emotes/theempressaria__face.png",
             description:
               "A close up of theempressaria's face where she is making a strange grimacy face with her eyes closed.",
             title: "theemp31Weird",
@@ -348,7 +350,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/6brc417tcylpI599NymwyJ/385556ca5dea99c0bf9a08a3b636357b/3.0",
+            url: "/assets/emotes/metalandcoffee__beer.png",
             description:
               "An illustration of Ebonie holding a big pint of frothy beer. She looks incredibly happy.",
             title: "metala19Cheers",
@@ -362,7 +364,7 @@ export const data = [
           isWinner: true,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/HRhQUy3FZBlDVzQwhu2mY/3611d42900226db4fb2e34db4def4690/3.0",
+            url: "/assets/emotes/sociablesteve__squishy.png",
             description:
               "A purple pixel blob thing with floating square eyes that is called a squishy.",
             title: "squishy",
@@ -376,7 +378,7 @@ export const data = [
           isWinner: true,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/5Rp6SlTeYnIA54ehZ0kj8R/76247c44a4e241b1e0f042b2db87ab62/3.0",
+            url: "/assets/emotes/matty_twoshoes__gangsta.png",
             description:
               "An illustration of Matty in a pink bunny suit. He is also wearing sunglasses.",
             title: "mattyt25Bunnygangsta",
@@ -399,7 +401,7 @@ export const data = [
           isWinner: false,
           description: "Matty has a secret",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/32Wz4ijRR9tVVjRgR7PKvR/27536dd3f5045f2165e6cfc8cf036085/ff90abf3-eb7d-4007-a883-3f83b4c82a85-profile_image-300x300.png",
+            url: "/assets/users/matty_twoshoes.png",
             description: "A photograph of Matty on a bright pinky purple background.",
             title: "matty_twoshoes",
             height: 300,
@@ -413,7 +415,7 @@ export const data = [
           isWinner: false,
           description: "Perfect Timing!",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/32Wz4ijRR9tVVjRgR7PKvR/27536dd3f5045f2165e6cfc8cf036085/ff90abf3-eb7d-4007-a883-3f83b4c82a85-profile_image-300x300.png",
+            url: "/assets/users/matty_twoshoes.png",
             description: "A photograph of Matty on a bright pinky purple background.",
             title: "matty_twoshoes",
             height: 300,
@@ -427,7 +429,7 @@ export const data = [
           isWinner: true,
           description: "Get your balls in!",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/6RSaLOGMVxPXEgItdkqGEj/7153c784a7b5087b71c920f6d21663f2/ddd150f5-6328-407f-bc9f-c5a9b50b4032-profile_image-300x300.png",
+            url: "/assets/users/lucecarter.png",
             description:
               "An illustrated image of Luce Carter wearing armour and making a heart shape with her hands.",
             title: "lucecarter",
@@ -442,7 +444,7 @@ export const data = [
           isWinner: false,
           description: "uwu",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/2vfIXbQId0xT4DpHhS4M2V/e4c6aca6bd49ebb75ac78ca872f8b6ba/948a62f5-b4e9-4adb-9ee5-ce3c3f573db2-profile_image-300x300.png",
+            url: "/assets/users/ladyofcode.png",
             description: "A photograph of ladyofcode lit up by dark red and blue lighting.",
             title: "ladyofcode",
             height: 300,
@@ -463,7 +465,7 @@ export const data = [
           isWinner: true,
           description: "The Clones",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/BAxitBIKvIWpjRt6Up6fw/d71ea13b524f16b579027c9dd1d1d5ca/4799d6f5-6127-4020-9edd-98ed8c9c626b-profile_image-300x300.png",
+            url: "/assets/users/finitesingularity.png",
             description:
               "A photography of finitesingularity on a nice day in a field somewhere. The sky is blue and the trees are green and he is smiling.",
             title: "finitesingularity",
@@ -477,7 +479,7 @@ export const data = [
           isWinner: false,
           description: "VTube Face",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/5FM7Z0XhD4IW6tBKb2n0fV/f9a58d3ddd7bece378ba4cb1d802fbdd/d6ad7e06-0362-48c6-a0c1-048c8d3ec0fc-profile_image-300x300.png",
+            url: "/assets/users/thatn00b__.png",
             description: "An illustration of thatn00b wearing his infamous straw hat.",
             title: "thatn00b__",
             height: 300,
@@ -490,7 +492,7 @@ export const data = [
           isWinner: false,
           description: "ChaosBall",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/2OAMcbZVeD5sXEwcC2n1aP/6677bea5754c592bccb27a454276cc6c/49218c67-14ed-46e0-a439-499e6c4e5a9e-profile_image-300x300.png",
+            url: "/assets/users/jwalter.png",
             description: "A photograph of jwalter with nice trees in the background. It is sunny.",
             title: "jwalter",
             height: 300,
@@ -511,7 +513,7 @@ export const data = [
           isWinner: true,
           description: "The Claw Team API in DarkLang",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/2OAMcbZVeD5sXEwcC2n1aP/6677bea5754c592bccb27a454276cc6c/49218c67-14ed-46e0-a439-499e6c4e5a9e-profile_image-300x300.png",
+            url: "/assets/users/jwalter.png",
             description: "A photograph of jwalter with nice trees in the background. It is sunny.",
             title: "jwalter",
             height: 300,
@@ -524,7 +526,7 @@ export const data = [
           isWinner: false,
           description: "TAU",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/BAxitBIKvIWpjRt6Up6fw/d71ea13b524f16b579027c9dd1d1d5ca/4799d6f5-6127-4020-9edd-98ed8c9c626b-profile_image-300x300.png",
+            url: "/assets/users/finitesingularity.png",
             description:
               "A photography of finitesingularity on a nice day in a field somewhere. The sky is blue and the trees are green and he is smiling.",
             title: "finitesingularity",
@@ -538,7 +540,7 @@ export const data = [
           isWinner: false,
           description: "MemeBox",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/5FM7Z0XhD4IW6tBKb2n0fV/f9a58d3ddd7bece378ba4cb1d802fbdd/d6ad7e06-0362-48c6-a0c1-048c8d3ec0fc-profile_image-300x300.png",
+            url: "/assets/users/thatn00b__.png",
             description: "An illustration of thatn00b wearing his infamous straw hat.",
             title: "thatn00b__",
             height: 300,
@@ -559,7 +561,7 @@ export const data = [
           isWinner: false,
           description: "!garbage",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/32Wz4ijRR9tVVjRgR7PKvR/27536dd3f5045f2165e6cfc8cf036085/ff90abf3-eb7d-4007-a883-3f83b4c82a85-profile_image-300x300.png",
+            url: "/assets/users/matty_twoshoes.png",
             description: "A photograph of Matty on a bright pinky purple background.",
             title: "matty_twoshoes",
             height: 300,
@@ -572,7 +574,7 @@ export const data = [
           isWinner: true,
           description: "DROP DROP DROP DROOOOP PLEASE ",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/5FM7Z0XhD4IW6tBKb2n0fV/f9a58d3ddd7bece378ba4cb1d802fbdd/d6ad7e06-0362-48c6-a0c1-048c8d3ec0fc-profile_image-300x300.png",
+            url: "/assets/users/thatn00b__.png",
             description: "An illustration of thatn00b wearing his infamous straw hat.",
             title: "thatn00b__",
             height: 300,
@@ -585,7 +587,7 @@ export const data = [
           isWinner: false,
           description: "KarenP4nth3r",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/11K928jjc0ww3Ry1vl3byN/bca257a9df6088b5b38b33080f9ab9c0/6f2be457-e8f7-4b37-a7d5-9c9f88357e61-profile_image-300x300.png",
+            url: "/assets/users/sociablesteve.png",
             description:
               "An illustration of sociable Steve drinking a cup of tea from a brown mug. He is wearing a dressing gown.",
             title: "sociablesteve",
@@ -599,7 +601,7 @@ export const data = [
           isWinner: false,
           description: "mattywho.com",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/6ktm16ED8qTdZ8bCvMZo96/09f40a851fe76a3efe5517b551b69968/d22fd40c-bff7-4b84-bffd-906bafcc453f-profile_image-300x300.png",
+            url: "/assets/users/tdrayson.png",
             description: "A photograph of tdrayson on a white background.",
             title: "tdrayson",
             height: 300,
@@ -612,7 +614,7 @@ export const data = [
           isWinner: false,
           description: "90 million lumens",
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/32Wz4ijRR9tVVjRgR7PKvR/27536dd3f5045f2165e6cfc8cf036085/ff90abf3-eb7d-4007-a883-3f83b4c82a85-profile_image-300x300.png",
+            url: "/assets/users/matty_twoshoes.png",
             description: "A photograph of Matty on a bright pinky purple background.",
             title: "matty_twoshoes",
             height: 300,
@@ -633,7 +635,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/4thXgmGZv3zHZ6TCxJmLua/ef3c101a481a105309da30e97d166b4d/4f07bceb-4017-4df8-aa2c-6125a5eb34ac-profile_image-300x300.png",
+            url: "/assets/users/sketchni.png",
             description: "An illustrated image of Denver holding some kind of magical staff.",
             title: "denverthecoder",
             height: 300,
@@ -646,7 +648,7 @@ export const data = [
           isWinner: false,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/6RSaLOGMVxPXEgItdkqGEj/7153c784a7b5087b71c920f6d21663f2/ddd150f5-6328-407f-bc9f-c5a9b50b4032-profile_image-300x300.png",
+            url: "/assets/users/lucecarter.png",
             description:
               "An illustrated image of Luce Carter wearing armour and making a heart shape with her hands.",
             title: "lucecarter",
@@ -660,7 +662,7 @@ export const data = [
           isWinner: true,
           description: null,
           image: {
-            url: "https://images.ctfassets.net/hxjyb5c77bom/4ZnBiejd6LSmQBWIOZYR0J/dd162fee7674c34518fd1de2a04176ab/9565f024-f108-454a-92f9-74069faf9809-profile_image-300x300.png",
+            url: "/assets/users/steffi128.png",
             description: "A dark and moody black and white photograph of Steffi's face.",
             title: "steffi128",
             height: 300,
