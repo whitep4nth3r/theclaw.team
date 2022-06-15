@@ -1,4 +1,4 @@
-import { useSession, getSession } from "next-auth/client";
+import { useSession, getSession } from "next-auth/react";
 import { NextSeo } from "next-seo";
 import Layout from "@components/Layout";
 import PageTitle from "@components/PageTitle";

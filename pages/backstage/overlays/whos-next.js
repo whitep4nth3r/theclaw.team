@@ -1,4 +1,4 @@
-import { useSession, getSession, signIn } from "next-auth/client";
+import { useSession, getSession, signIn } from "next-auth/react";
 import styles from "@styles/Overlays.module.css";
 import { motion } from "framer-motion";
 import TeamData from "@utils/TeamData";

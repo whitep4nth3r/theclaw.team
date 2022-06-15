@@ -1,8 +1,9 @@
-import { useSession, getSession, signOut, signIn } from "next-auth/client";
+import { useSession, signIn, signOut } from "next-auth/react";
+
 import styles from "@styles/LoggedInUser.module.css";
 
 export default function LoggedInUser() {
-  const [session] = useSession();
+  const { data: session } = useSession();
 
   const displayName = session?.user.name || "Welcome";
   const image = session?.user.image || "/assets/moth.png";

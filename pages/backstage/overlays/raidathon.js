@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSession, getSession, signIn } from "next-auth/client";
+import { useSession, getSession, signIn } from "next-auth/react";
 import OverlayStyles from "@styles/Overlays.module.css";
 import styles from "@styles/Raidathon.module.css";
 import classNames from "classnames/bind";

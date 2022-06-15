@@ -6,7 +6,7 @@ export default NextAuth({
   callbacks: {
     async signIn(props) {
       const allowedStreamers = await TeamData.getStreamerLogins();
-      const isAllowedToSignIn = allowedStreamers.includes(props.name.toLowerCase());
+      const isAllowedToSignIn = allowedStreamers.includes(props.user.name.toLowerCase());
 
       if (isAllowedToSignIn) {
         return true;

@@ -1,4 +1,4 @@
-import { Provider } from "next-auth/client";
+import { SessionProvider } from "next-auth/react";
 import "../styles/globals.css";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config.js";
@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <Provider
+      <SessionProvider
         // Provider options are not required but can be useful in situations where
         // you have a short session maxAge time. Shown here with default values.
         options={{
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         }}
         session={pageProps.session}>
         <Component {...pageProps} />
-      </Provider>
+      </SessionProvider>
     </>
   );
 }
