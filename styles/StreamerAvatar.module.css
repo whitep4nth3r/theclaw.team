@@ -57,7 +57,7 @@
   margin-top: 2rem;
   margin-bottom: 3rem;
   font-weight: var(--font-weight-normal);
-  font-family: var(--font-family-main);
+  font-family: var(--font-family-body);
   color: var(--color-fg);
   word-break: break-word;
 }
