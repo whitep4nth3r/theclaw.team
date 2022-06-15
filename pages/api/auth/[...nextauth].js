@@ -25,4 +25,5 @@ export default NextAuth({
       authorizationUrl: `https://id.twitch.tv/oauth2/authorize?response_type=code`,
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
 });

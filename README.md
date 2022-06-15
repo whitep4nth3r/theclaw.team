@@ -63,6 +63,7 @@ Add the following credentials to your `.env` file:
 TWITCH_CLIENT_ID={YOUR_NEW_CLIENT_ID}
 TWITCH_CLIENT_SECRET={YOUR_NEW_CLIENT_SECRET}
 NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=yourRandString
 ```
 
 ### Run the development server
