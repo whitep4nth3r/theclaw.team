@@ -73,6 +73,6 @@ export async function getStaticProps() {
       contentHtml,
       frontMatter: matterResult.data,
     },
-    // revalidate: 1
+    revalidate: 1
   };
 }
