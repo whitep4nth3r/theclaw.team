@@ -16,7 +16,7 @@
     "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
     "next": "^12.0.1",
-    "next-auth": "^3.29.3",
+    "next-auth": "^4.5.0",
     "next-seo": "^5.4.0",
     "next-sitemap": "^1.6.173",
     "react": "17.0.2",
