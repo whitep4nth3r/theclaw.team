@@ -4,12 +4,12 @@ import styles from "@styles/Awards.module.css";
 export default function Awards({ awardsData }) {
   return (
     <div className={styles.awards}>
-      {awardsData.map((category) => (
-        <div key={category.sys.id} className={styles.awards__category}>
+      {awardsData.map((category, index) => (
+        <div key={`category-${index}`} className={styles.awards__category}>
           <h2 className={styles.awards__categoryName}>{category.name}</h2>
           <div className={styles.awards__categoryNominees}>
-            {category.linkedFrom.awardNominationCollection.items.map((nomination) => (
-              <div key={nomination.sys.id}>
+            {category.awardNominationCollection.items.map((nomination, index) => (
+              <div key={`nomination-${index}`}>
                 <a
                   className={styles.awards__categoryLink}
                   href={nomination.externalLink}

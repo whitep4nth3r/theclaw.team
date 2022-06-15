@@ -1,11 +1,13 @@
 import { NextSeo } from "next-seo";
-import ContentfulData from "@utils/ContentfulData";
 import Layout from "@components/Layout";
 import PageTitle from "@components/PageTitle";
 import Awards from "@components/Awards";
+
+import { data } from "@data/awards/2021.js";
+
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrlForPage } from "@utils/OpenGraph";
 
-export default function Awards2021({ awardsData }) {
+export default function Awards2021() {
   const page = {
     title: "The Claw Community Awards 2021",
     description:
@@ -46,18 +48,8 @@ export default function Awards2021({ awardsData }) {
 
       <Layout>
         <PageTitle title="The Claw Community Awards 2021" />
-        <Awards awardsData={awardsData} />
+        <Awards awardsData={data} />
       </Layout>
     </>
   );
-}
-
-export async function getStaticProps() {
-  const awardsData = await ContentfulData.getAwardNominationsByYear("2021");
-
-  return {
-    props: {
-      awardsData,
-    },
-  };
 }
