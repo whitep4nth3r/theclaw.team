@@ -11,7 +11,7 @@ import Moth from "@components/Svg/Moth";
 let cx = classNames.bind(styles);
 
 export default function Raidathon() {
-  const [session] = useSession();
+  const { data: session } = useSession();
   const [isAnimating, setIsAnimating] = useState(true);
 
   useEffect(() => {

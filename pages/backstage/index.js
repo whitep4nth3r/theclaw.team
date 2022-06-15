@@ -8,7 +8,7 @@ import PleaseSignIn from "@components/PleaseSignIn";
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrlForPage } from "@utils/OpenGraph";
 
 export default function Backstage() {
-  const [session, loading] = useSession();
+  const { data: session } = useSession();
 
   const page = {
     title: "Backstage",

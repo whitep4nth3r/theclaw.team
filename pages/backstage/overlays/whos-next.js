@@ -7,7 +7,7 @@ import { getTimeRemaining } from "@utils/Date";
 import Countdown from "react-countdown";
 
 export default function OverlayWhosNext({ nextUp, avatar, isPartner }) {
-  const [session] = useSession();
+  const { data: session } = useSession();
 
   const { broadcast_name, start_time, title } = nextUp;
 

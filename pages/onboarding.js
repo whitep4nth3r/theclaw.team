@@ -14,7 +14,7 @@ import PleaseSignIn from "@components/PleaseSignIn";
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrlForPage } from "@utils/OpenGraph";
 
 export default function Onboarding({ contentHtml, frontMatter }) {
-  const [session, loading] = useSession();
+  const { data: session } = useSession();
 
   const imageUrl = generateImageUrlForPage({
     pageTitle: frontMatter.title,

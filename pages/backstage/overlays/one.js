@@ -4,7 +4,7 @@ import styles from "@styles/Overlays.module.css";
 import { motion } from "framer-motion";
 
 export default function OverlayOne() {
-  const [session] = useSession();
+  const { data: session } = useSession();
 
   return (
     <div className={styles.overlay__container}>
