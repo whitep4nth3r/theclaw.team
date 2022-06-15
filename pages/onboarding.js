@@ -1,27 +1,33 @@
 import { useSession, getSession } from "next-auth/client";
 import { NextSeo } from "next-seo";
-import ContentfulData from "@utils/ContentfulData";
+
+import fs from "fs";
+import matter from "gray-matter";
+import { remark } from "remark";
+import html from "remark-html";
+import Styles from "@styles/Typography.module.css";
+
 import Layout from "@components/Layout";
 import PageTitle from "@components/PageTitle";
 import PleaseSignIn from "@components/PleaseSignIn";
-import RichText from "@components/RichText";
+
 import { IMG_WIDTH, IMG_HEIGHT, generateImageUrlForPage } from "@utils/OpenGraph";
 
-export default function Onboarding({ page }) {
+export default function Onboarding({ contentHtml, frontMatter }) {
   const [session, loading] = useSession();
 
   const imageUrl = generateImageUrlForPage({
-    pageTitle: page.title,
+    pageTitle: frontMatter.title,
   });
 
   return (
     <>
       <NextSeo
-        title={page.title}
-        description={page.description}
+        title={frontMatter.title}
+        description={frontMatter.description}
         openGraph={{
-          title: page.title,
-          description: page.description,
+          title: frontMatter.title,
+          description: frontMatter.description,
           url: "https://theclaw.team/onboarding,",
           site_name: "The Claw Stream Team — Onboarding",
           type: "website",
@@ -31,7 +37,7 @@ export default function Onboarding({ page }) {
               url: imageUrl,
               width: IMG_WIDTH,
               height: IMG_HEIGHT,
-              alt: `Open Graph Image for the ${page.title} on theclaw.team`,
+              alt: `Open Graph Image for the ${frontMatter.title} on theclaw.team`,
             },
           ],
         }}
@@ -43,8 +49,10 @@ export default function Onboarding({ page }) {
       />
 
       <Layout>
-        <PageTitle title={page.title} />
-        {session && <RichText content={page.content} />}
+        <PageTitle title={frontMatter.title} />
+        {session && (
+          <div className={Styles.typography} dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        )}
         {!session && <PleaseSignIn />}
       </Layout>
     </>
@@ -52,12 +60,20 @@ export default function Onboarding({ page }) {
 }
 
 export async function getServerSideProps(context) {
-  const page = await ContentfulData.getPageContent("onboarding");
+  const fileContents = fs.readFileSync("./data/onboarding.md", "utf-8");
+
+  // Use gray-matter to parse the post metadata section
+  const matterResult = matter(fileContents);
+
+  // Use remark to convert markdown into HTML string
+  const processedContent = await remark().use(html).process(matterResult.content);
+  const contentHtml = processedContent.toString();
 
   return {
     props: {
       session: await getSession(context),
-      page,
+      contentHtml,
+      frontMatter: matterResult.data,
     },
   };
 }

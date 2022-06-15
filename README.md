@@ -4,13 +4,13 @@
 
 This project showcases The Claw Twitch stream team and uses the following services:
 
-- [Contentful](https://contentful.com)
 - Twitch authentication for team members via [next-auth](https://next-auth.js.org/)
 - A DarkLang API developed by [jwalter](https://github.com/jwalter)
 
 This project is open source (MIT) and your contributions are welcome!
 
-If you discover any issues with the site or would like to request any new features, please submit an issue to the repository,
+If you discover any issues with the site or would like to request any new features, please submit an
+issue to the repository,
 
 ## Getting started
 
@@ -39,49 +39,10 @@ touch .env
 Copy the environment variable keys from `.env.example` and add those into your `.env` file.
 
 ```text
-CTFL_SPACE_ID=
-CTFL_ACCESS_TOKEN=
-
 TWITCH_CLIENT_ID=
 TWITCH_CLIENT_SECRET=
 NEXTAUTH_URL=http://localhost:3000
 ```
-
-## Set up a new Contentful space
-
-The project serves content from a Contentful space. Included in the repo is an export of the
-content. You can use the Contentful CLI to populate a fresh Contentful space with data required for
-this project.
-
-- [Sign up to Contentful](https://contentful.com/sign-up)
-- Create a new space inside your Contentful account
-- Go to Settings > General Settings, grab the space ID and add it to your `.env` file
-
-```text
-CTFL_SPACE_ID={YOUR_NEW_SPACE_ID}
-```
-
-- Go to Settings > API keys and generate an access token for the Content Delivery API. Add this to
-  your `.env` file:
-
-```text
-CTFL_ACCESS_TOKEN={YOUR_NEW_DELIVERY_ACCESS_TOKEN}
-```
-
-## Import the content model and data into your new Contentful space
-
-- [Install the Contentful CLI using your preferred package manager](https://www.contentful.com/developers/docs/tutorials/cli/installation/)
-- Log in to the CLI using `contentful login` and follow the instructions
-
-Run the following commands in your terminal. Remember to swap out `{SPACE_ID}` for your new space
-ID:
-
-```bash
-cd path/to/project
-contentful space import --space-id {SPACE_ID} --content-file setup/content.json
-```
-
-You should now have the content model and content populated for you to run the project.
 
 ## Set up a new Twitch app
 
