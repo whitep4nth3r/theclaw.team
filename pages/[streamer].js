@@ -112,26 +112,12 @@ export default function Streamer({ streamer, hasBanner }) {
   );
 }
 
-export async function getStaticPaths() {
-  const streamers = await TeamData.getStreamerLogins();
-
-  const paths = streamers.map((streamer) => {
-    return { params: { streamer } };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const streamer = await TeamData.getStreamer(params.streamer);
 
   return {
     props: {
       streamer,
     },
-    revalidate: 1,
   };
 }

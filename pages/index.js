@@ -55,7 +55,7 @@ export default function Home({ streamers, frontMatter, contentHtml }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const streamers = await TeamData.getStreamers();
 
   const fileContents = fs.readFileSync("./data/home.md", "utf-8");
@@ -73,6 +73,5 @@ export async function getStaticProps() {
       contentHtml,
       frontMatter: matterResult.data,
     },
-    revalidate: 1
   };
 }
