@@ -10,9 +10,11 @@ import StreamerAvatar from "@components/StreamerAvatar";
 export default function Raidathon({ schedule }) {
   useEffect(() => import("@github/time-elements/dist/local-time-element.js"), []);
 
+  const raidathonDate = "20-21 Oct 2022";
+
   const page = {
-    title: "The Claw Team Raidathon 2022",
-    description: "Check out the schedule for The Claw Team Raidathon happening on 9-10 June 2022.",
+    title: "The Claw Team Raidathon 2022 — 2nd Edition",
+    description: `Check out the schedule for The Claw Team Raidathon happening on ${raidathonDate}`,
   };
 
   const imageUrl = generateImageUrlForPage({
@@ -48,9 +50,9 @@ export default function Raidathon({ schedule }) {
       />
 
       <Layout>
-        <PageTitle title="Raidathon 9-10 June 2022" />
+        <PageTitle title={`Raidathon ${raidathonDate}`} />
         <p className={styles.explainer}>
-          Check out the schedule for The Claw Team Raidathon happening on 9-10 June 2022. Schedule
+          Check out the schedule for The Claw Team Raidathon happening on {raidathonDate}. Schedule
           times are shown in your own local timezone.
         </p>
         <div className={styles.grid}>
@@ -92,7 +94,7 @@ export default function Raidathon({ schedule }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const streamers = await TeamData.getStreamers();
 
   const getStreamerData = (login) => {
@@ -101,69 +103,64 @@ export async function getStaticProps() {
 
   const schedule = [
     {
-      streamer: "ladyofcode",
-      time: "2022-06-09T08:00:00Z",
-      data: getStreamerData("ladyofcode"),
-    },
-    {
       streamer: "splashley",
-      time: "2022-06-09T10:00:00Z",
+      time: "2022-10-20T11:00:00Z",
       data: getStreamerData("splashley"),
     },
     {
       streamer: "toefrog",
-      time: "2022-06-09T13:00:00Z",
+      time: "2022-10-20T14:00:00Z",
       data: getStreamerData("toefrog"),
     },
     {
-      streamer: "finitesingularity",
-      time: "2022-06-09T16:00:00Z",
-      data: getStreamerData("finitesingularity"),
+      streamer: "tdrayson",
+      time: "2022-10-20T17:00:00Z",
+      data: getStreamerData("tdrayson"),
     },
     {
-      streamer: "matty_twoshoes",
-      time: "2022-06-09T19:00:00Z",
-      data: getStreamerData("matty_twoshoes"),
+      streamer: "samkitkat",
+      time: "2022-10-20T20:00:00Z",
+      data: getStreamerData("samkitkat"),
     },
     {
       streamer: "metalandcoffee_",
-      time: "2022-06-09T22:00:00Z",
+      time: "2022-10-20T23:00:00Z",
       data: getStreamerData("metalandcoffee_"),
     },
     {
-      streamer: "ryan_the_rhg",
-      time: "2022-06-10T01:00:00Z",
-      data: getStreamerData("ryan_the_rhg"),
-    },
-    {
       streamer: "haliphax",
-      time: "2022-06-10T04:00:00Z",
+      time: "2022-10-21T02:00:00Z",
       data: getStreamerData("haliphax"),
     },
     {
-      streamer: "whitep4nth3r",
-      time: "2022-06-10T07:00:00Z",
-      data: getStreamerData("whitep4nth3r"),
-    },
-    {
-      streamer: "splashley",
-      time: "2022-06-10T10:00:00Z",
-      data: getStreamerData("splashley"),
+      streamer: "lucecarter",
+      time: "2022-10-21T05:00:00Z",
+      data: getStreamerData("lucecarter"),
     },
     {
       streamer: "ukmadlz",
-      time: "2022-06-10T13:00:00Z",
+      time: "2022-10-21T08:00:00Z",
       data: getStreamerData("ukmadlz"),
     },
     {
-      streamer: "sociablesteve",
-      time: "2022-06-10T16:00:00Z",
-      data: getStreamerData("sociablesteve"),
+      streamer: "matty_twoshoes",
+      time: "2022-10-21T11:00:00Z",
+      data: getStreamerData("matty_twoshoes"),
     },
     {
-      streamer: "tdrayson",
-      time: "2022-06-10T19:00:00Z",
-      data: getStreamerData("tdrayson"),
+      streamer: "finitesingularity",
+      time: "2022-10-21T14:00:00Z",
+      data: getStreamerData("finitesingularity"),
+    },
+    {
+      streamer: "geometricjim",
+      time: "2022-10-21T17:00:00Z",
+      data: getStreamerData("geometricjim"),
+    },
+    {
+      streamer: "whitep4nth3r",
+      time: "2022-10-21T20:00:00Z",
+      data: getStreamerData("whitep4nth3r"),
     },
   ];
 
@@ -171,6 +168,5 @@ export async function getStaticProps() {
     props: {
       schedule,
     },
-    revalidate: 1,
   };
 }
