@@ -26,6 +26,16 @@
 
   --content-max-width: 1280px;
   --text-content-max-width: 800px;
+
+  --neon: #ff6ec7;
+}
+
+@font-face {
+  font-family: "beon";
+  src: url("/assets/fonts/beonmedium-7z34-webfont.woff2") format("woff2"),
+    url("/assets/fonts/beonmedium-7z34-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html {
