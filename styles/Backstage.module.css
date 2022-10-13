@@ -18,9 +18,23 @@
   width: 2rem;
   margin-right: 0.5rem;
 }
+
 .backstage__list {
   padding-left: 0;
   list-style: none;
+  margin-bottom: 4rem;
+}
+
+.backstage__listTitle {
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-family-main);
+  color: var(--yellow);
+  word-break: break-word;
+  text-align: left;
+  display: block;
 }
 
 .backstage__listItem {

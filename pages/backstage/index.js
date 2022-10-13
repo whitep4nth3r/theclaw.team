@@ -57,10 +57,26 @@ export default function Backstage() {
             </h2>
 
             <Link href="/onboarding">
-              <a className={styles.backstage__onboardingLink}>Go to onboarding information</a>
+              <a className={styles.backstage__onboardingLink}>Go to onboarding information 👉</a>
             </Link>
 
-            <p className={styles.backstage__text}>Branded Overlays (add as OBS sources):</p>
+            <h3 className={styles.backstage__listTitle}>✨ Assets</h3>
+            <ul className={styles.backstage__list}>
+              <li className={styles.backstage__listItem}>
+                <Link href="/assets/team/moth.svg">
+                  <a className={styles.backstage__listItemLink}>p4nth3rMoth (svg)</a>
+                </Link>
+              </li>
+              <li className={styles.backstage__listItem}>
+                <Link href="/assets/team/moth_with_banner.svg">
+                  <a className={styles.backstage__listItemLink}>p4nth3rMoth with banner (svg)</a>
+                </Link>
+              </li>
+            </ul>
+
+            <h3 className={styles.backstage__listTitle}>
+              📺 Branded Overlays (add as OBS sources)
+            </h3>
             <ul className={styles.backstage__list}>
               <li className={styles.backstage__listItem}>
                 <Link href="/backstage/overlays/one">
