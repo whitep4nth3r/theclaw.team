@@ -32,6 +32,15 @@
   text-align: center;
 }
 
+.countdown {
+  display: block;
+  width: 133px;
+  letter-spacing: 1.5px;
+  text-align: left;
+  position: relative;
+  left: 2px;
+}
+
 .moth {
   display: block;
   height: 80px;

@@ -23,7 +23,11 @@ export default function Raidathon() {
 
       <h1 id="text" className={styles.text}>
         RAIDATHON <br />
-        {showCountdown && <Countdown date={date} />}
+        {showCountdown && (
+          <span className={styles.countdown}>
+            <Countdown date={date} />
+          </span>
+        )}
       </h1>
     </div>
   );
