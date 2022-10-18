@@ -103,11 +103,6 @@ export async function getServerSideProps() {
 
   const schedule = [
     {
-      streamer: "toefrog",
-      time: "2022-10-20T14:00:00Z",
-      data: getStreamerData("toefrog"),
-    },
-    {
       streamer: "tdrayson",
       time: "2022-10-20T17:00:00Z",
       data: getStreamerData("tdrayson"),
