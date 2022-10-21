@@ -84,6 +84,11 @@ export default function Backstage() {
                 </Link>
               </li>
               <li className={styles.backstage__listItem}>
+                <Link href="/backstage/overlays/two">
+                  <a className={styles.backstage__listItemLink}>The Claw Logo reversed</a>
+                </Link>
+              </li>
+              <li className={styles.backstage__listItem}>
                 <Link href="/backstage/overlays/whos-next">
                   <a className={styles.backstage__listItemLink}>Who's Next Rotator</a>
                 </Link>
