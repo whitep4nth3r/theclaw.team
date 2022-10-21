@@ -1,3 +1,22 @@
-.memoriesform {
-    
+.memoriesform {     
+    font-size: 42px;
+    color: var(--white);
+    text-align: center;
+    margin: auto;
+}
+
+.memoriesform__label {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.memoriesform__input  {
+    padding:10px;
+    margin:10px 0;
+    border: 2px solid #eee;
+}
+
+.memoriesform__button {
+    font-size: 24px;
 }

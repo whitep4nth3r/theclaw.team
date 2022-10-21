@@ -49,20 +49,12 @@ export default function MemoriesForm({ frontMatter, contentHtml }) {
                 <PageTitle title={frontMatter.title} />
                 <div className={Styles.typography} dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
-                <form name="memories" method="POST" data-netlify="true" action="/awards/memories-form">
+                <form name="memories" method="POST" data-netlify="true" action="/awards/memories-form" className={styles.memoriesform}>
                     <input type="hidden" name="memories-name" value="memories" />
-                    <p>
-                        <label>Title: <input type="text" name="title" /></label>
-                    </p>
-                    <p>
-                        <label>Description: <textarea name="description"></textarea></label>
-                    </p>
-                    <p>
-                        <label>Link: <input type="url" name="link" /></label>
-                    </p>
-                    <p>
-                        <button type="submit">Save</button>
-                    </p>
+                    <label className={styles.memoriesform__label}>Title: <input type="text" name="title" className={styles.memoriesform__input} /></label>
+                    <label className={styles.memoriesform__label}>Description: <textarea name="description" className={styles.memoriesform__input}></textarea></label>
+                    <label className={styles.memoriesform__label}>Link: <input type="url" name="link" className={styles.memoriesform__input} /></label>
+                    <button type="submit" className={styles.memoriesform__button}>Save</button>
                 </form>
 
             </Layout>
