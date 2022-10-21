@@ -1,6 +1,6 @@
 # theclaw.team | The Claw Stream Team on Twitch
 
-![A screenshot of theclaw.team in desktop view showing a red sidebar to the left wiht menu links below the moth logo and the introduction to the team and what it is about on the right](screenshot.png)
+![A screenshot of theclaw.team in desktop view showing a red sidebar to the left with menu links below the moth logo and the introduction to the team and what it is about on the right](screenshot.png)
 
 This project showcases The Claw Twitch stream team and uses the following services:
 
@@ -86,7 +86,7 @@ feedback and contributions are welcome!
 
 ## Production environment
 
-This project is hosted on Vercel. When you make a pull request, the owner of the organisation will
+This project is hosted on Netlify. When you make a pull request, the owner of the organisation will
 be asked to authorise the deploy preview to kick off a build.
 
 When the deploy preview is ready, the pull request will update with a URL.
