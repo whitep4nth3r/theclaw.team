@@ -14,6 +14,8 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  grid-template-columns: 1fr;
+  max-width: 500px;
 }
 
 .grid a {
