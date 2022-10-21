@@ -42,6 +42,7 @@ Copy the environment variable keys from `.env.example` and add those into your `
 TWITCH_CLIENT_ID=
 TWITCH_CLIENT_SECRET=
 NEXTAUTH_URL=http://localhost:3000
+MONGODB_ATLAS_CONN_STRING=
 ```
 
 ## Set up a new Twitch app
@@ -66,13 +67,44 @@ NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=yourRandString
 ```
 
+## Add MongoDB Atlas Connection String
+
+The project connects to a MongoDB Atlas cluster to store memory submissions. We will need to create a cluster and add our new connection string.
+
+[Learn how to get started with MongoDB Atlas](https://www.mongodb.com/docs/atlas/getting-started/).
+
+- Create a new free Atlas cluster
+- Save your connection string
+
+Add the following credentials to your `.env` file:
+
+```text
+MONGODB_ATLAS_CONN_STRING={YOUR_NEW_CONNECTION_STRING}
+```
+
 ### Run the development server
+
+In order to use the new form for saving memories, you will need to use netlify-cli.
+
+```bash
+npm i -g netlify-cli
+```
+You will then want to use the netlify-cli to run the application to hook up the form correctly. 
+
+***NOTE: You will need to have this deployed on your own Netlify account in order to log the results in your Netlify account***
+
+If running locally and not requiring the form:
 
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the project running locally.
+
+If you want the form functionality and it is deployed in your Netlify account:
+```bash
+netlify dev
+```
 
 ## Learn More about Next.js
 
