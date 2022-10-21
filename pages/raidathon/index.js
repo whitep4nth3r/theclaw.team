@@ -8,7 +8,14 @@ import { IMG_WIDTH, IMG_HEIGHT, generateImageUrlForPage } from "@utils/OpenGraph
 import StreamerAvatar from "@components/StreamerAvatar";
 
 export default function Raidathon({ schedule }) {
-  useEffect(() => import("@github/time-elements/dist/local-time-element.js"), []);
+  useEffect(() => {
+    const load = async () => {
+      await import("@github/time-elements/dist/local-time-element.js");
+    };
+
+    load();
+    return () => {};
+  }, []);
 
   const raidathonDate = "20-21 Oct 2022";
 
@@ -55,9 +62,9 @@ export default function Raidathon({ schedule }) {
           Check out the schedule for The Claw Team Raidathon happening on {raidathonDate}. Schedule
           times are shown in your own local timezone.
         </p>
-        <div className={styles.grid}>
+        <div>
           {schedule.map((slot) => (
-            <>
+            <div className={styles.grid} key={slot.streamer}>
               <a
                 href={`https://twitch.tv/${slot.streamer}`}
                 rel="nofollow"
@@ -86,7 +93,7 @@ export default function Raidathon({ schedule }) {
                   minute="numeric"
                   time-zone-name="short"></local-time>
               </a>
-            </>
+            </div>
           ))}
         </div>
       </Layout>
