@@ -57,6 +57,17 @@ export default function Header() {
               </a>
             </Link>
           </li>
+          <li>
+            <Link href="/awards/memories-form">
+              <a
+                className={cx({
+                  header__navListItemLink: true,
+                  header__navListItemLinkActive: pathname === "/awards/memories-form",
+                })}>
+                Awards
+              </a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
