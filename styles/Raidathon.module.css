@@ -17,7 +17,7 @@
 }
 
 .text {
-  animation: flicker 1.5s infinite alternate;
+  /* animation: flicker 1.5s infinite alternate; */
   font-family: beon;
   font-size: 24px;
   color: var(--white);
