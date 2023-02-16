@@ -33,7 +33,7 @@ new to tech — to engage, ask questions and learn in a positive and welcoming e
 
 ### Approach interactions with thoughtfulness and care
 
-Use welcoming and inclusive language. For example, use non-gender-specific nouns for addressing
+Use welcoming and inclusive language. It's a good idea to use non-gender-specific nouns for addressing
 groups of people (such as “folks”, “people” or “friends”). Always ask if you are unsure how someone
 would like to be addressed (such as their preferred name or pronouns). Be mindful that you may be
 communicating with others whose first language is not English.
