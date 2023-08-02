@@ -7,8 +7,9 @@ import {
 } from "@utils/Date";
 import styles from "@styles/StreamerSchedule.module.css";
 
-export default function StreamerSchedule({ segments, name }) {
+export default function StreamerSchedule({ segments }) {
   const showSchedule = segments?.length > 0;
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   return (
     <>
@@ -36,7 +37,7 @@ export default function StreamerSchedule({ segments, name }) {
                     <p className={styles.schedule__segmentCat}>{segment.category.name}</p>
                   )}
                   <p className={styles.schedule__segmentTime}>
-                    {formatTwitchScheduleTimeSlot(segment.start_time, segment.end_time)}
+                    {formatTwitchScheduleTimeSlot(segment.start_time, segment.end_time)} {tz}
                   </p>
                 </div>
               </div>
