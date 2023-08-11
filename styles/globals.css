@@ -1,6 +1,7 @@
 :root {
   --red: #f11012;
   --red-darker: #d90d10;
+  --red-overlay: 241, 16, 18, 0.9;
   --green: #82af3a;
   --black: #0f111a;
   --white: #ffffff;
